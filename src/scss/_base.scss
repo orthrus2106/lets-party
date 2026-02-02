@@ -1,0 +1,143 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $header-h;
+}
+
+body {
+  margin: 0;
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-main;
+  font-size: $fs-body;
+  line-height: $lh-base;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-main;
+  font-weight: $fw-black;
+  text-transform: uppercase;
+  letter-spacing: $ls-title;
+}
+
+h1 {
+  font-size: $fs-h1;
+  line-height: $lh-tight;
+}
+
+h2 {
+  font-size: $fs-h2;
+  line-height: $lh-snug;
+}
+
+h3 {
+  font-size: $fs-h3;
+  line-height: $lh-snug;
+}
+
+p {
+  color: $color-muted;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition:
+    color $transition,
+    opacity $transition,
+    border-color $transition;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding-inline: $container-gutter;
+}
+
+/* Utilities */
+.section {
+  padding-block: $sp-6;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-4;
+}
+
+.kicker {
+  font-size: $fs-small;
+  letter-spacing: $ls-kicker;
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-weight: 300;
+  margin-bottom: $sp-2;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-2;
+  padding: $sp-4 $sp-6;
+  font-weight: $fw-bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    background-color $transition,
+    color $transition,
+    box-shadow $transition,
+    transform 0.15s ease;
+}
+
+.btn--outline {
+  border: 1px solid $color-accent;
+  color: $color-text;
+
+  &:hover {
+    background-color: $color-accent;
+    color: $color-bg;
+    box-shadow: $shadow-accent;
+  }
+}

@@ -1,0 +1,50 @@
+.about {
+  @extend .section;
+
+  &__label {
+    @extend .kicker;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: $sp-5;
+  }
+
+  &__text {
+    flex: 1; // Занимает доступное место
+  }
+
+  &__title {
+    font-size: $fs-h2;
+    line-height: $lh-snug;
+    margin-bottom: $sp-4; // Отступ до подзаголовка
+    text-transform: uppercase; // Как на скриншоте
+  }
+
+  &__subtitle {
+    color: $color-muted;
+    line-height: 1.6;
+    font-size: 16px;
+    max-width: 60ch; // Ограничиваем длину строки для читаемости
+  }
+
+  &__picture {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: $r-2;
+  }
+}
+
+@media (max-width: $desktop) {
+  .about {
+    &__content {
+      flex-direction: column;
+    }
+    &__picture {
+      max-width: 600px;
+    }
+  }
+}
