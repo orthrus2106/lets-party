@@ -1,6 +1,6 @@
 .contact {
   @extend .section;
-
+  margin-bottom: $sp-6;
   &__card {
     position: relative;
     border-radius: $r-3;
@@ -74,9 +74,7 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.03);
 
-  transition:
-    transform $transition,
-    border-color $transition,
+  transition: transform $transition, border-color $transition,
     background-color $transition;
 
   &:hover {
@@ -130,9 +128,7 @@
       -webkit-mask: var(--icon) center / contain no-repeat;
       mask: var(--icon) center / contain no-repeat;
 
-      transition:
-        transform $transition,
-        filter $transition;
+      transition: transform $transition, filter $transition;
     }
   }
 
