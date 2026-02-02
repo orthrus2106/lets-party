@@ -13,5 +13,8 @@
     "vite": "^7.2.4",
     "vite-plugin-image-optimizer": "^2.0.3",
     "vite-plugin-webfont-dl": "^3.11.1"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
   }
 }
