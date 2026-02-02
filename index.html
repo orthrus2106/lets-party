@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-vue-app</title>
+    <title>Let's Party / Dynasty Events</title>
   </head>
   <body>
     <header class="header">
       <div class="header__container container">
         <a class="header__logo" href="#">
-          <img
-            class="header__image"
-            src="./src/assets/images/logo.png"
-            alt="Let's Party"
-          />
+          <img class="header__image" src="logo.png" alt="Let's Party" />
           <p class="header__text">Let's Party</p>
         </a>
 
@@ -38,13 +34,10 @@
             </li>
           </ul>
 
-          <!-- LANG (desktop) -->
           <div class="lang lang--desktop" aria-label="Язык">
-            <button class="lang__btn is-active" type="button" data-lang="ru">
-              RU
-            </button>
-            <button class="lang__btn" type="button" data-lang="lv">LV</button>
-            <button class="lang__btn" type="button" data-lang="en">EN</button>
+            <a href="/" class="lang__btn is-active" id="lang-ru">RU</a>
+            <a href="/lv/" class="lang__btn" id="lang-lv">LV</a>
+            <a href="/en/" class="lang__btn" id="lang-en">EN</a>
           </div>
         </nav>
 
@@ -69,13 +62,10 @@
         ></button>
 
         <nav class="menu__panel" aria-label="Навигация">
-          <!-- LANG (mobile) -->
           <div class="lang lang--mobile" aria-label="Язык">
-            <button class="lang__btn is-active" type="button" data-lang="ru">
-              RU
-            </button>
-            <button class="lang__btn" type="button" data-lang="lv">LV</button>
-            <button class="lang__btn" type="button" data-lang="en">EN</button>
+            <a href="/" class="lang__btn is-active">RU</a>
+            <a href="/lv/" class="lang__btn">LV</a>
+            <a href="/en/" class="lang__btn">EN</a>
           </div>
 
           <ul class="menu__list">

@@ -87,7 +87,6 @@
   }
 }
 
-// для featured-отзывов (если захочешь выделить 1-2)
 .review-card--featured {
   background: $color-accent-soft;
   border-color: $color-accent-border;
@@ -156,7 +155,6 @@
     color: $color-muted-2;
   }
 
-  // кнопка-заглушка для закрытия кликом по фону
   &__backdrop {
     position: fixed;
     inset: 0;

@@ -12,21 +12,21 @@
   }
 
   &__text {
-    flex: 1; // Занимает доступное место
+    flex: 1;
   }
 
   &__title {
     font-size: $fs-h2;
     line-height: $lh-snug;
-    margin-bottom: $sp-4; // Отступ до подзаголовка
-    text-transform: uppercase; // Как на скриншоте
+    margin-bottom: $sp-4;
+    text-transform: uppercase;
   }
 
   &__subtitle {
     color: $color-muted;
     line-height: 1.6;
     font-size: 16px;
-    max-width: 60ch; // Ограничиваем длину строки для читаемости
+    max-width: 60ch;
   }
 
   &__picture {

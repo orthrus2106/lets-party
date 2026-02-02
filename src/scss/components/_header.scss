@@ -1,6 +1,4 @@
-// -------------------------
-// Header
-// -------------------------
+
 .header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -53,9 +51,6 @@
   background-color: $color-bg;
 }
 
-// -------------------------
-// Burger
-// -------------------------
 .burger {
   appearance: none;
   border: 0;
@@ -106,9 +101,6 @@
   }
 }
 
-// -------------------------
-// Desktop nav
-// -------------------------
 .nav__list {
   display: flex;
   align-items: center;
@@ -146,9 +138,6 @@
   }
 }
 
-// -------------------------
-// Language switch (segmented)
-// -------------------------
 .lang {
   display: inline-flex;
   align-items: center;
@@ -218,13 +207,11 @@
   border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-// -------------------------
-// Mobile menu
-// -------------------------
+
 .menu {
   position: fixed;
   inset: 0;
-  z-index: 110; // выше хедера, чтобы меню всегда было сверху
+  z-index: 110; 
 
   opacity: 0;
   pointer-events: none;
@@ -303,9 +290,6 @@
   overflow: hidden;
 }
 
-// -------------------------
-// Responsive
-// -------------------------
 .lang--desktop {
   display: none;
 }
@@ -323,7 +307,7 @@
   }
 
   .menu {
-    display: none; // на десктопе off-canvas не нужен
+    display: none; 
   }
 
   .lang--desktop {
