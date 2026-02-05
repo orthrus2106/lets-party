@@ -1,0 +1,49 @@
+{
+  "heroTitle": "LET'S PARTY —",
+  "heroSubtitle": "Your night. Your rules. Your game.",
+  "heroLead": "Mafia and Bunker as a producer experience: host, script, atmosphere, and guest engagement.",
+  "heroButton": "Discuss format",
+  "nav": {
+    "about": "About",
+    "formats": "Formats",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "contacts": "Contacts"
+  },
+  "about": {
+    "kicker": "Who we are",
+    "title": "We create not games — we create experiences",
+    "content": "**Let's Party** is a project born from friendship, energy, and love for live celebrations.\n\nWe are Anastasia and Diana, two friends who have been at the center of all events since childhood: drama club, school holidays, scripts, and parties for friends — simply because we were genuinely interested.\n\nBack in eighth grade, after a play production, we came up with the name **Dynasty**, combining our names and the dream of our own business. In 2025, this dream took the form of an event planning company — **Dynasty Events**. But we decided to start with the Let's Party project.\n\n**Anastasia** — co-founder of the project and host since 2022, with over 500 events under her belt. For her, it's important not to \"work through the format,\" but to create an atmosphere suitable for this particular company.\n\n**Diana** — co-founder of the project with entrepreneurial experience since 2020. She easily finds an approach to any person, knows how to inspire, negotiate, and create a comfortable, lively atmosphere.",
+    "note": "We are the same in vibe, energy, and attitude to work — and that's what makes our team cohesive."
+  },
+  "formats": {
+    "label": "What do we offer?",
+    "title": "Our formats"
+  },
+  "why": {
+    "label": "Why choose us",
+    "title": "We create experiences, not just run games"
+  },
+  "reviewsSection": {
+    "label": "What they say about us?",
+    "title": "Client reviews"
+  },
+  "faqSection": {
+    "label": "Frequently asked questions",
+    "title": "FAQ"
+  },
+  "gallery": {
+    "label": "Atmosphere",
+    "title": "Gallery"
+  },
+  "contact": {
+    "kicker": "Get in touch",
+    "title": "Book an event",
+    "text": "Write where it's more convenient for you. We'll respond quickly and clarify the details.",
+    "note": "* Travel and road are calculated separately."
+  },
+  "footer": {
+    "name": "Let's Party",
+    "meta": "Let's Party - Produced by Dynasty Events"
+  }
+}

@@ -1,0 +1,277 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/gallery"
+public_folder: "/gallery"
+
+locale: "ru"
+
+collections:
+  # Локализации
+  - name: "locales"
+    label: "Локализации"
+    files:
+      - name: "ru"
+        label: "Русский (RU)"
+        file: "public/locales/ru.json"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Hero Lead", name: "heroLead", widget: "text" }
+          - { label: "Hero Button", name: "heroButton", widget: "string" }
+          
+          - label: "Навигация"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "О нас", name: "about", widget: "string" }
+              - { label: "Форматы", name: "formats", widget: "string" }
+              - { label: "Отзывы", name: "reviews", widget: "string" }
+              - { label: "FAQ", name: "faq", widget: "string" }
+              - { label: "Контакты", name: "contacts", widget: "string" }
+          
+          - label: "Секция О нас"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Кикер", name: "kicker", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Контент", name: "content", widget: "markdown" }
+              - { label: "Заметка", name: "note", widget: "text" }
+          
+          - label: "Секция Форматы"
+            name: "formats"
+            widget: "object"
+            fields:
+              - { label: "Лейбл", name: "label", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          
+          - label: "Секция Почему мы"
+            name: "why"
+            widget: "object"
+            fields:
+              - { label: "Лейбл", name: "label", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          
+          - label: "Секция Отзывы"
+            name: "reviewsSection"
+            widget: "object"
+            fields:
+              - { label: "Лейбл", name: "label", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          
+          - label: "Секция FAQ"
+            name: "faqSection"
+            widget: "object"
+            fields:
+              - { label: "Лейбл", name: "label", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          
+          - label: "Секция Галерея"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Лейбл", name: "label", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          
+          - label: "Секция Контакты"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Кикер", name: "kicker", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Текст", name: "text", widget: "text" }
+              - { label: "Заметка", name: "note", widget: "string" }
+          
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Название", name: "name", widget: "string" }
+              - { label: "Мета", name: "meta", widget: "string" }
+
+      - name: "lv"
+        label: "Латышский (LV)"
+        file: "public/locales/lv.json"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Hero Lead", name: "heroLead", widget: "text" }
+          - { label: "Hero Button", name: "heroButton", widget: "string" }
+          
+          - label: "Navigācija"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "Par mums", name: "about", widget: "string" }
+              - { label: "Formāti", name: "formats", widget: "string" }
+              - { label: "Atsauksmes", name: "reviews", widget: "string" }
+              - { label: "FAQ", name: "faq", widget: "string" }
+              - { label: "Kontakti", name: "contacts", widget: "string" }
+          
+          - label: "Par mums sadaļa"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Kicker", name: "kicker", widget: "string" }
+              - { label: "Virsraksts", name: "title", widget: "string" }
+              - { label: "Saturs", name: "content", widget: "markdown" }
+              - { label: "Piezīme", name: "note", widget: "text" }
+          
+          - label: "Formātu sadaļa"
+            name: "formats"
+            widget: "object"
+            fields:
+              - { label: "Etiķete", name: "label", widget: "string" }
+              - { label: "Virsraksts", name: "title", widget: "string" }
+          
+          - label: "Kāpēc mēs sadaļa"
+            name: "why"
+            widget: "object"
+            fields:
+              - { label: "Etiķete", name: "label", widget: "string" }
+              - { label: "Virsraksts", name: "title", widget: "string" }
+          
+          - label: "Atsauksmju sadaļa"
+            name: "reviewsSection"
+            widget: "object"
+            fields:
+              - { label: "Etiķete", name: "label", widget: "string" }
+              - { label: "Virsraksts", name: "title", widget: "string" }
+          
+          - label: "FAQ sadaļa"
+            name: "faqSection"
+            widget: "object"
+            fields:
+              - { label: "Etiķete", name: "label", widget: "string" }
+              - { label: "Virsraksts", name: "title", widget: "string" }
+          
+          - label: "Galerijas sadaļa"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Etiķete", name: "label", widget: "string" }
+              - { label: "Virsraksts", name: "title", widget: "string" }
+          
+          - label: "Kontaktu sadaļa"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Kicker", name: "kicker", widget: "string" }
+              - { label: "Virsraksts", name: "title", widget: "string" }
+              - { label: "Teksts", name: "text", widget: "text" }
+              - { label: "Piezīme", name: "note", widget: "string" }
+          
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Nosaukums", name: "name", widget: "string" }
+              - { label: "Meta", name: "meta", widget: "string" }
+
+      - name: "en"
+        label: "Английский (EN)"
+        file: "public/locales/en.json"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Hero Lead", name: "heroLead", widget: "text" }
+          - { label: "Hero Button", name: "heroButton", widget: "string" }
+          
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "About", name: "about", widget: "string" }
+              - { label: "Formats", name: "formats", widget: "string" }
+              - { label: "Reviews", name: "reviews", widget: "string" }
+              - { label: "FAQ", name: "faq", widget: "string" }
+              - { label: "Contacts", name: "contacts", widget: "string" }
+          
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Kicker", name: "kicker", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Content", name: "content", widget: "markdown" }
+              - { label: "Note", name: "note", widget: "text" }
+          
+          - label: "Formats Section"
+            name: "formats"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          
+          - label: "Why Us Section"
+            name: "why"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          
+          - label: "Reviews Section"
+            name: "reviewsSection"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          
+          - label: "FAQ Section"
+            name: "faqSection"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          
+          - label: "Gallery Section"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Kicker", name: "kicker", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Note", name: "note", widget: "string" }
+          
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Meta", name: "meta", widget: "string" }
+
+  # Отзывы
+  - name: "reviews"
+    label: "Отзывы"
+    folder: "public/reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Текст отзыва (RU)", name: "text_ru", widget: "text" }
+      - { label: "Текст отзыва (LV)", name: "text_lv", widget: "text" }
+      - { label: "Текст отзыва (EN)", name: "text_en", widget: "text" }
+      - { label: "Скриншот отзыва", name: "proofImage", widget: "image" }
+      - { label: "Alt для скриншота", name: "proofAlt", widget: "string", default: "Скриншот отзыва" }
+      - { label: "Порядок", name: "order", widget: "number", default: 0 }
+
+  # Галерея
+  - name: "gallery"
+    label: "Галерея"
+    folder: "public/gallery-items"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Изображение", name: "image", widget: "image" }
+      - { label: "Alt текст (RU)", name: "alt_ru", widget: "string" }
+      - { label: "Alt текст (LV)", name: "alt_lv", widget: "string" }
+      - { label: "Alt текст (EN)", name: "alt_en", widget: "string" }
+      - { label: "Порядок", name: "order", widget: "number", default: 0 }

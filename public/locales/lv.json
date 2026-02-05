@@ -1,0 +1,49 @@
+{
+  "heroTitle": "LET'S PARTY —",
+  "heroSubtitle": "Tava nakts. Tavi noteikumi. Tava spēle.",
+  "heroLead": "Mafija un Bunkeris kā producenta pieredze: vadītājs, scenārijs, atmosfēra un viesu iesaistīšana.",
+  "heroButton": "Apspriest formātu",
+  "nav": {
+    "about": "Par mums",
+    "formats": "Formāti",
+    "reviews": "Atsauksmes",
+    "faq": "BUJ",
+    "contacts": "Kontakti"
+  },
+  "about": {
+    "kicker": "Kas mēs esam",
+    "title": "Mēs radām ne spēles — mēs radām pieredzi",
+    "content": "**Let's Party** — tas ir projekts, kas radīts no draudzības, enerģijas un mīlestības uz dzīviem svētkiem.\n\nMēs esam Anastasija un Diāna, divas draudzenes, kas kopš bērnības ir bijušas visu pasākumu centrā: aktieru pulciņš, skolas svētki, scenāriji un ballītes draugiem — vienkārši tāpēc, ka mums tas bija patiesi interesanti.\n\nVēl astotajā klasē pēc izrādes iestudējuma mēs izdomājām nosaukumu **Dynasty**, savienojot mūsu vārdus un sapni par savu lietu. 2025. gadā šis sapnis ieguva formu svētku organizēšanas uzņēmumā — **Dynasty Events**. Bet sākt mēs nolēmām ar projektu Let's Party.\n\n**Anastasija** — projekta līdzdibinātāja un vadītāja kopš 2022. gada, aiz muguras — vairāk nekā 500 pasākumi. Viņai ir svarīgi ne \"nostrādāt formātu\", bet radīt atmosfēru, kas piemērota tieši šai kompānijai.\n\n**Diāna** — projekta līdzdibinātāja ar uzņēmējdarbības pieredzi kopš 2020. gada. Viņa viegli atrod pieeju jebkuram cilvēkam, prot iedvesmot, vienoties un radīt ērtu, dzīvu atmosfēru.",
+    "note": "Mēs esam vienādi pēc vibes, enerģijas un attieksmes pret darbu — un tieši tas padara mūsu komandu vienotu."
+  },
+  "formats": {
+    "label": "Ko mēs piedāvājam?",
+    "title": "Mūsu formāti"
+  },
+  "why": {
+    "label": "Kāpēc izvēlas mūs",
+    "title": "Mēs radām pieredzi, nevis vienkārši vadām spēles"
+  },
+  "reviewsSection": {
+    "label": "Ko par mums saka?",
+    "title": "Klientu atsauksmes"
+  },
+  "faqSection": {
+    "label": "Bieži uzdotie jautājumi",
+    "title": "BUJ"
+  },
+  "gallery": {
+    "label": "Atmosfēra",
+    "title": "Galerija"
+  },
+  "contact": {
+    "kicker": "Sazināties",
+    "title": "Rezervēt pasākumu",
+    "text": "Raksti tur, kur tev ērtāk. Atbildēsim ātri un precizēsim detaļas.",
+    "note": "* Brauciens un ceļš tiek aprēķināti atsevišķi."
+  },
+  "footer": {
+    "name": "Let's Party",
+    "meta": "Let's Party - Produced by Dynasty Events"
+  }
+}

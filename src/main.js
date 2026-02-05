@@ -1,19 +1,23 @@
 import './scss/main.scss';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const headerEl = document.querySelector('.header');
 
-// helpers
+// ==================== HELPERS ====================
 const lockBody = (lock) => {
   document.body.classList.toggle('body--locked', lock);
 };
 
-// Header background
+// ==================== HEADER ====================
 window.addEventListener('scroll', () => {
   if (!headerEl) return;
   headerEl.classList.toggle('header--scrolled', window.scrollY > 30);
 });
 
-// Burger menu
+// ==================== BURGER MENU ====================
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 
@@ -46,6 +50,7 @@ if (burger && menu) {
   });
 }
 
+// ==================== ACCORDION ====================
 const detailsList = Array.from(document.querySelectorAll('.acc-trigger'));
 
 detailsList.forEach((detail) => {
@@ -76,6 +81,7 @@ document.addEventListener('click', (e) => {
   target.setAttribute('open', true);
 });
 
+// ==================== PROOF DIALOG ====================
 const proofDialog = document.querySelector('#proof');
 const proofImg = proofDialog?.querySelector('.proof__img');
 const proofClose = proofDialog?.querySelector('[data-proof-close]');
@@ -115,5 +121,83 @@ proofDialog?.addEventListener('close', () => {
   proofImg.alt = '';
 });
 
+// ==================== FOOTER YEAR ====================
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ==================== ГАЛЕРЕЯ (SWIPER) ====================
+const initGallerySwiper = () => {
+  const swiperEl = document.querySelector('.gallery__swiper');
+  if (!swiperEl) return;
+
+  // Загружаем данные из инжектнутого скрипта
+  const dataScript = document.getElementById('gallery-data');
+  let galleryImages = [];
+  
+  if (dataScript) {
+    try {
+      galleryImages = JSON.parse(dataScript.textContent);
+    } catch (e) {
+      console.error('Error parsing gallery data:', e);
+    }
+  }
+
+  // Fallback на дефолтные изображения если данных нет
+  if (galleryImages.length === 0) {
+    galleryImages = [
+      { src: '/gallery/1.jpg', alt: 'Let\'s Party — мероприятие' },
+      { src: '/gallery/2.jpg', alt: 'Let\'s Party — атмосфера' },
+      { src: '/gallery/3.jpg', alt: 'Let\'s Party — эмоции гостей' },
+      { src: '/gallery/4.jpg', alt: 'Let\'s Party — ведущие' },
+    ];
+  }
+
+  // Монтируем слайды
+  const wrapper = swiperEl.querySelector('.swiper-wrapper');
+  if (wrapper) {
+    wrapper.innerHTML = galleryImages
+      .map(
+        (img) => `
+          <div class="swiper-slide gallery__slide">
+            <img
+              class="gallery__img"
+              src="${img.src}"
+              alt="${img.alt}"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        `
+      )
+      .join('');
+  }
+
+  // Инициализируем Swiper
+  new Swiper('.gallery__swiper', {
+    modules: [Navigation, Pagination, Keyboard],
+    slidesPerView: 1,
+    spaceBetween: 12,
+    speed: 350,
+    loop: galleryImages.length > 3,
+    grabCursor: true,
+    keyboard: { enabled: true },
+
+    navigation: {
+      prevEl: '.gallery__nav--prev',
+      nextEl: '.gallery__nav--next',
+    },
+
+    pagination: {
+      el: '.gallery__pagination',
+      clickable: true,
+    },
+
+    breakpoints: {
+      768: { slidesPerView: 1, spaceBetween: 16 },
+      1200: { slidesPerView: 1, spaceBetween: 18 },
+    },
+  });
+};
+
+// ==================== ИНИЦИАЛИЗАЦИЯ ====================
+initGallerySwiper();

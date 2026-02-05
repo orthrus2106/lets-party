@@ -1,0 +1,8 @@
+# Редиректы для языковых версий
+/ru    /    301
+/ru/   /    301
+
+# SPA fallback
+/lv/*  /lv/index.html  200
+/en/*  /en/index.html  200
+/*     /index.html      200
