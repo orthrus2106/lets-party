@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="lv">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Организация атмосферных мероприятий и иммерсивных игр в Риге. Уникальный опыт, авторские форматы Mafia и Bunker для частных и корпоративных клиентов."
+      content="Atmosfērisku pasākumu un imersīvo spēļu organizēšana Rīgā. Unikāla pieredze, autorformāti Mafija un Bunkurs privātiem un korporatīvajiem klientiem."
     />
 
-    <meta http-equiv="content-language" content="ru" />
+    <meta http-equiv="content-language" content="lv" />
     <title>Let's Party / Dynasty Events</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,29 +26,31 @@
           <p class="header__text">Let's Party</p>
         </a>
 
-        <!-- DESKTOP NAV  -->
-        <nav class="header__nav nav" aria-label="Навигация">
+        <nav class="header__nav nav" aria-label="Navigācija">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#about">О нас</a>
+              <a class="nav__link" href="#about">Par mums</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#formats">Форматы</a>
+              <a class="nav__link" href="#formats">Formāti</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#reviews">Отзывы</a>
+              <a class="nav__link" href="#extras">Papildus</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#reviews">Atsauksmes</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#faq">FAQ</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#booking">Контакты</a>
+              <a class="nav__link" href="#booking">Kontakti</a>
             </li>
           </ul>
 
-          <div class="lang lang--desktop" aria-label="Язык">
-            <a href="/" class="lang__btn is-active" id="lang-ru">RU</a>
-            <a href="/lv/" class="lang__btn" id="lang-lv">LV</a>
+          <div class="lang lang--desktop" aria-label="Valoda">
+            <a href="/" class="lang__btn" id="lang-ru">RU</a>
+            <a href="/lv/" class="lang__btn is-active" id="lang-lv">LV</a>
             <a href="/en/" class="lang__btn" id="lang-en">EN</a>
           </div>
         </nav>
@@ -56,7 +58,7 @@
         <button
           class="burger"
           type="button"
-          aria-label="Открыть меню"
+          aria-label="Atvērt izvēlni"
           aria-expanded="false"
           aria-controls="menu"
         >
@@ -64,28 +66,28 @@
         </button>
       </div>
 
-      <!-- MOBILE MENU -->
       <div class="menu" id="menu" aria-hidden="true">
         <button
           class="menu__overlay"
           type="button"
           data-menu-close
-          aria-label="Закрыть меню"
+          aria-label="Aizvērt izvēlni"
         ></button>
 
-        <nav class="menu__panel" aria-label="Навигация">
-          <div class="lang lang--mobile" aria-label="Язык">
-            <a href="/" class="lang__btn is-active">RU</a>
-            <a href="/lv/" class="lang__btn">LV</a>
+        <nav class="menu__panel" aria-label="Navigācija">
+          <div class="lang lang--mobile" aria-label="Valoda">
+            <a href="/" class="lang__btn">RU</a>
+            <a href="/lv/" class="lang__btn is-active">LV</a>
             <a href="/en/" class="lang__btn">EN</a>
           </div>
 
           <ul class="menu__list">
-            <li><a class="menu__link" href="#about">О нас</a></li>
-            <li><a class="menu__link" href="#formats">Форматы</a></li>
-            <li><a class="menu__link" href="#reviews">Отзывы</a></li>
+            <li><a class="menu__link" href="#about">Par mums</a></li>
+            <li><a class="menu__link" href="#formats">Formāti</a></li>
+            <li><a class="menu__link" href="#extras">Papildus</a></li>
+            <li><a class="menu__link" href="#reviews">Atsauksmes</a></li>
             <li><a class="menu__link" href="#faq">FAQ</a></li>
-            <li><a class="menu__link" href="#booking">Контакты</a></li>
+            <li><a class="menu__link" href="#booking">Kontakti</a></li>
           </ul>
         </nav>
       </div>
@@ -98,22 +100,16 @@
             <h1 class="hero__title">
               LET'S <span>PARTY</span> — <br />
               <small class="hero__subtitle"
-                >Твоя ночь. Твои правила. Твоя игра.</small
+                >Tava ballīte sākas ar mums</small
               >
             </h1>
             <p class="hero__lead">
-              Мафия и Бункер как продюсерский опыт: ведущий, сценарий, атмосфера
-              и вовлечение гостей.
+              Mafija un Bunkurs kā producentu pieredze: vadītājs, scenārijs, atmosfēra 
+              un viesu iesaiste.
             </p>
 
-            <!-- <ul class="hero__chips">
-              <li>RU / LV / EN</li>
-              <li>Выезд на вашу площадку</li>
-              <li>Mafia / Bunker</li>
-            </ul> -->
-
             <div class="hero__actions">
-              <a class="hero__button btn" href="#booking">Обсудить формат</a>
+              <a class="hero__button btn" href="#booking">Apspriežam formātu</a>
             </div>
           </div>
         </div>
@@ -123,94 +119,274 @@
         <div class="container">
           <div class="about__grid">
             <div class="about__text">
-              <p class="about__kicker">Кто мы такие</p>
+              <p class="about__kicker">Kas mēs esam</p>
 
-              <h2 class="about__title">Мы создаём не игры — мы создаём опыт</h2>
+              <h2 class="about__title">Mēs neradām spēles — mēs radām pieredzi</h2>
 
               <div class="about__body">
                 <p>
-                  <strong>Let’s Party</strong> — это проект, созданный из
-                  дружбы, энергии и любви к живым праздникам.
+                  <strong>Let’s Party</strong> — ir projekts, kas dzimis no 
+                  draudzības, enerģijas un mīlestības pret dzīvīgiem svētkiem.
                 </p>
 
                 <p>
-                  Мы — Анастасия и Диана, две подруги, которые с детства были в
-                  центре всех мероприятий: актёрский кружок, школьные праздники,
-                  сценарии и вечеринки для друзей — просто потому, что нам это
-                  было по-настоящему интересно.
+                  Mēs esam Anastasija un Diāna, divas draudzenes, kuras kopš bērnības ir 
+                  bijušas visu pasākumu centrā: aktieru pulciņš, skolas svētki, 
+                  scenāriji un ballītes draugiem — vienkārši tāpēc, ka mums tas 
+                  patiešām interesēja.
                 </p>
 
                 <p>
-                  Ещё в восьмом классе после постановки спектакля мы придумали
-                  название
-                  <strong>Dynasty</strong>, соединив наши имена и мечту о своём
-                  деле. В 2025 году эта мечта обрела форму компании по созданию
-                  праздников — <strong>Dynasty Events</strong>. Но начать мы
-                  решили с проекта Let’s Party.
+                  Vēl astotajā klasē pēc izrādes iestudēšanas mēs izdomājām nosaukumu 
+                  <strong>Dynasty</strong>, savienojot mūsu vārdus un sapni par savu 
+                  uzņēmumu. 2025. gadā šis sapnis ieguva svētku aģentūras formu — 
+                  <strong>Dynasty Events</strong>. Bet sākt mēs nolēmām ar 
+                  projektu Let’s Party.
                 </p>
 
                 <p>
-                  <strong>Анастасия</strong> — сооснователь проекта и ведущая с
-                  2022 года, за плечами — более 500 ивентов. Для неё важно не
-                  «отработать формат», а создать атмосферу, подходящую именно
-                  этой компании.
+                  <strong>Anastasija</strong> — projekta līdzdibinātāja un vadītāja 
+                  kopš 2022. gada, ar vairāk nekā 500 pasākumu pieredzi. Viņai ir 
+                  svarīgi nevis "atstrādāt formātu", bet gan radīt atmosfēru, kas 
+                  atbilst tieši šai kompānijai.
                 </p>
 
                 <p>
-                  <strong>Диана</strong> — сооснователь проекта с
-                  предпринимательским опытом с 2020 года. Она легко находит
-                  подход к любому человеку, умеет зажечь, договориться и создать
-                  комфортную, живую атмосферу.
+                  <strong>Diāna</strong> — līdzdibinātāja ar uzņēmējdarbības pieredzi 
+                  kopš 2020. gada. Viņa viegli atrod pieeju jebkuram cilvēkam, prot 
+                  aizraut, vienoties un radīt komfortablu, dzīvu atmosfēru.
                 </p>
 
                 <p class="about__note">
-                  Мы одинаковы по вайбу, энергии и отношению к делу — и именно
-                  это делает нашу команду цельной.
+                  Mēs esam vienādas pēc "vibe", enerģijas un attieksmes pret darbu — 
+                  un tieši tas padara mūsu komandu vienotu.
                 </p>
               </div>
             </div>
 
             <div class="about__media">
-              <figure class="about__photo">
-                <img
-                  class="about__img"
-                  src="/src/assets/about.webp"
-                  alt="Анастасия и Диана — Let’s Party"
-                  loading="lazy"
-                  decoding="async"
-                  width="640"
-                  height="853"
-                />
-                <figcaption class="about__cap">
-                  Let’s Party • Dynasty Events
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
+  <div class="about__slider swiper" aria-label="Let’s Party Galerija">
+    <div class="swiper-wrapper">
+
+<div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/1.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/2.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/3.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/4.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/5.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/6.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/7.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/8.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/9.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/10.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/11.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/12.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/13.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/14.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/15.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/16.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/17.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/18.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/19.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/20.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/21.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/22.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/23.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/24.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/25.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/26.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/27.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/28.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/29.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/30.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/31.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="/src/assets/gallery/32.jpg" alt="Let’s Party — фото с мероприятия" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">Let’s Party • Dynasty Events</figcaption>
+        </figure>
+      </div>
+
+    <button class="about__nav about__nav--prev" type="button" aria-label="Iepriekšējais foto"></button>
+    <button class="about__nav about__nav--next" type="button" aria-label="Nākamais foto"></button>
+  </div>
+</div>
       </section>
 
       <section class="formats" id="formats">
         <div class="container">
-          <p class="formats__label">Что мы предлагаем?</p>
-          <h2 class="formats__title">Наши форматы</h2>
+          <p class="formats__label">Ko mēs piedāvājam?</p>
+          <h2 class="formats__title">Mūsu formāti</h2>
 
           <div class="formats__grid">
             <article class="format-card format-card--featured">
               <div class="format-card__badge format-card__badge--featured">
-                от 80 € / час
+                no 80 € / stundā
               </div>
               <h3 class="format-card__title">Party Mafia</h3>
               <p class="format-card__hook">
-                Полноценный сценарий для программы вашего праздника начиная от 3
-                часов.
+                Pilnvērtīgs scenārijs jūsu svētku programmai sākot no 3 stundām.
               </p>
 
               <ul class="format-card__list">
-                <li>Уникальные роли и характеры персонажей</li>
-                <li>Ведущий как шоураннер</li>
-                <li>Максимальное вовлечение гостей</li>
-                <li>Игра в игре с конкурсами за имунитет и на «выживание»</li>
+                <li>Unikālas lomas un tēlu raksturi</li>
+                <li>Vadītājs kā šovrauners</li>
+                <li>Maksimāla viesu iesaiste</li>
+                <li>Spēle spēlē ar konkursiem par imunitāti un "izdzīvošanu"</li>
               </ul>
 
               <a
@@ -218,25 +394,25 @@
                 class="format-card__link"
                 data-acc="format-author"
               >
-                Подробнее →
+                Sīkāk →
               </a>
             </article>
 
             <article class="format-card format-card--featured">
               <div class="format-card__badge format-card__badge--featured">
-                от 100 € / час
+                no 100 € / stundā
               </div>
               <h3 class="format-card__title">Bunker: Immersive Experience</h3>
               <p class="format-card__hook">
-                Погружение в сюжет игры ещё до ее начала. Новинка рынка!
+                Iegrimšana sižetā vēl pirms spēles sākuma. Jaunums tirgū!
               </p>
 
               <ul class="format-card__list">
-                <li>Засекреченная локация</li>
-                <li>Персональные роли и досье участника</li>
-                <li>Подготовленный реквизит (багаж)</li>
-                <li>История, где каждый выбор имеет значение</li>
-                <li>Атмосфера кино, а не игры</li>
+                <li>Slepena lokācija</li>
+                <li>Personīgās lomas un dalībnieka dosjē</li>
+                <li>Sagatavoti rekvizīti (bagāža)</li>
+                <li>Stāsts, kurā katrai izvēlei ir nozīme</li>
+                <li>Kino atmosfēra, nevis vienkārši spēle</li>
               </ul>
 
               <a
@@ -244,24 +420,24 @@
                 class="format-card__link"
                 data-acc="format-immersive-bunker"
               >
-                Подробнее →
+                Sīkāk →
               </a>
             </article>
 
             <article class="format-card">
-              <div class="format-card__badge">от 60 € / час</div>
-              <h3 class="format-card__title">Классическая мафия</h3>
+              <div class="format-card__badge">no 60 € / stundā</div>
+              <h3 class="format-card__title">Klasiskā mafija</h3>
               <p class="format-card__hook">
-                Знакомый формат для любой компании
+                Pazīstams formāts jebkurai kompānijai
               </p>
 
               <ul class="format-card__list">
-                <li>Классические правила</li>
-                <li>Для любой аудитории</li>
-                <li>Гибкая длительность</li>
-                <li>Музыкальное сопровождение</li>
-                <li>Профессиональная атрибутика</li>
-                <li>Подарки лучшим игрокам</li>
+                <li>Klasiskie noteikumi</li>
+                <li>Jebkurai auditorijai</li>
+                <li>Elastīgs ilgums</li>
+                <li>Muzikālais pavadījums</li>
+                <li>Profesionāla atribūtika</li>
+                <li>Dāvanas labākajiem spēlētājiem</li>
               </ul>
 
               <a
@@ -269,19 +445,19 @@
                 class="format-card__link"
                 data-acc="format-classic"
               >
-                Подробнее →
+                Sīkāk →
               </a>
             </article>
 
             <article class="format-card">
-              <div class="format-card__badge">от 60 € / час</div>
-              <h3 class="format-card__title">Бункер</h3>
-              <p class="format-card__hook">Игра на логику и обсуждение</p>
+              <div class="format-card__badge">no 60 € / stundā</div>
+              <h3 class="format-card__title">Bunkurs</h3>
+              <p class="format-card__hook">Spēle uz loģiku un diskusijām</p>
 
               <ul class="format-card__list">
-                <li>Сюжет выживания</li>
-                <li>Стратегия и аргументы</li>
-                <li>Командная динамика</li>
+                <li>Izdzīvošanas sižets</li>
+                <li>Stratēģija un argumenti</li>
+                <li>Komandas dinamika</li>
               </ul>
 
               <a
@@ -289,30 +465,33 @@
                 class="format-card__link"
                 data-acc="format-bunker"
               >
-                Подробнее →
+                Sīkāk →
               </a>
             </article>
 
-            <!-- EXTRAS: выглядит как “широкая карточка” внутри сетки -->
             <article class="extras-card" id="extras">
               <div class="extras-card__head">
-                <p class="extras-card__kicker">Дополнительно</p>
-                <h3 class="extras-card__title">Услуги от Dynasty Events</h3>
+                <p class="extras-card__kicker">Papildus</p>
+                <h3 class="extras-card__title">Dynasty Events pakalpojumi</h3>
                 <p class="extras-card__text">
-                  Если нужен не только формат игры, но и полный ивент “под ключ”
-                  — мы поможем.
+                  Ja jums nepieciešams ne tikai spēles formāts, bet pilns pasākums 
+                  "zem atslēgas" — mēs palīdzēsim.
                 </p>
               </div>
 
               <ul class="extras-card__list">
-                <li>Организация камерных свадеб, корпоративов, юбилеев</li>
-                <li>Девичники и мальчишники под ключ</li>
-                <li>Фотограф и видеограф</li>
-                <li>
-                  Мобильная съёмка + монтаж
-                  <span>(формат обсуждаем с клиентом)</span>
+                <li class="extras-card-item">
+                  Mazu kāzu, korporatīvo pasākumu, jubileju organizēšana
                 </li>
-                <li>Декор и оформление мероприятий</li>
+                <li class="extras-card-item">
+                  Vecmeitu un vecpuišu ballītes "zem atslēgas"
+                </li>
+                <li class="extras-card-item">Fotogrāfs un videogrāfs</li>
+                <li class="extras-card-item">
+                  Mobilā filmēšana + montāža
+                  <span>(formātu apspriežam ar klientu)</span>
+                </li>
+                <li class="extras-card-item">Pasākumu dekors un noformēšana</li>
               </ul>
             </article>
           </div>
@@ -324,22 +503,22 @@
           <div class="accordion accordion--details" id="formats-accordion">
             <details class="acc-details acc-trigger" id="format-author">
               <summary class="acc-details__summary">
-                Party Mafia — наш хедлайнер
+                Party Mafia — mūsu hita formāts
                 <span class="acc-details__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-details__panel">
                 <div class="acc-details__content">
                   <p>
-                    Party mafia — это уникальный формат, как новый взгляд на
-                    привычную «мафию». Не просто игра, а полноценная программа
-                    для вашего праздника. Участником дается возможность проявить
-                    свои актерские способности, показать себя с новой стороны и
-                    вырвать победу за счет своих знаний, ловкости, реакции и
-                    смекалки. Это формат, где много эмоций и динамики, где гости
-                    раскрепощаются и включаются в процесс. Подходит для
-                    компаний, которые хотят драйва, движения и ярких
-                    воспоминаний.
+                    Party Mafia ir unikāls formāts, jauns skatījums uz ierasto 
+                    "mafiju". Tā nav tikai spēle, bet pilnvērtīga programma 
+                    jūsu svētkiem. Dalībniekiem tiek dota iespēja izpaust savas 
+                    aktierprasmes, parādīt sevi no jaunas puses un izcīnīt 
+                    uzvaru, pateicoties savām zināšanām, veiklībai, reakcijai 
+                    un atjautībai. Tas ir formāts ar daudz emocijām un dinamiku, 
+                    kur viesi atbrīvojas un iesaistās procesā. Piemērots 
+                    kompānijām, kuras vēlas "draivu", kustību un spilgtas 
+                    atmiņas.
                   </p>
                 </div>
               </div>
@@ -357,15 +536,14 @@
               <div class="acc-details__panel">
                 <div class="acc-details__content">
                   <p>
-                    Этот формат — для тех, кто хочет максимального погружения в
-                    атмосферу апокалипсиса и выживания. Мы берем за основу
-                    классический «бункер» и создаем уникальный игровой опыт под
-                    вашу компанию: с продуманной концепцией, атмосферой и
-                    деталями, которые раскрываются постепенно. Гости заранее
-                    знают свою профессию и предысторию, а дальше игра
-                    разворачивается в целую историю уже на самой локации. Это
-                    формат для тех, кто хочет не просто поиграть, а прожить
-                    игру!
+                    Šis formāts ir domāts tiem, kuri vēlas maksimālu iedziļināšanos 
+                    apokalipses un izdzīvošanas atmosfērā. Mēs ņemam par pamatu 
+                    klasisko "bunkuru" un radām unikālu spēles pieredzi tieši 
+                    jūsu kompānijai: ar pārdomātu koncepciju, atmosfēru un 
+                    detaļām, kas atklājas pakāpeniski. Viesi iepriekš zina savu 
+                    profesiju un priekšstāstu, un tālāk spēle izvēršas veselā 
+                    stāstā jau pašā lokācijā. Šis ir formāts tiem, kuri vēlas 
+                    nevis vienkārši spēlēt, bet izdzīvot spēli!
                   </p>
                 </div>
               </div>
@@ -373,19 +551,18 @@
 
             <details class="acc-details acc-trigger" id="format-classic">
               <summary class="acc-details__summary">
-                Классическая «Мафия»
+                Klasiskā "Mafija"
                 <span class="acc-details__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-details__panel">
                 <div class="acc-details__content">
                   <p>
-                    Стратегическая, психологическая и интеллектуальная игра для
-                    спокойных компаний. Идеальный формат, чтобы ненавязчиво
-                    дополнить вечер на 1–2 часа: пообщаться, понаблюдать,
-                    включить логику и почувствовать азарт без лишнего шума.
-                    Подходит для тех, кто любит классику, атмосферу и
-                    размеренный темп.
+                    Stratēģiska, psiholoģiska un intelektuāla spēle mierīgām 
+                    kompānijām. Ideāls formāts, lai neuzbāzīgi papildinātu 
+                    vakaru uz 1–2 stundām: aprunātos, pavērotu, pieslēgtu 
+                    loģiku un sajustu azartu bez lieka trokšņa. Piemērots 
+                    tiem, kuri mīl klasiku, atmosfēru un mērenu tempu.
                   </p>
                 </div>
               </div>
@@ -393,22 +570,21 @@
 
             <details class="acc-details acc-trigger" id="format-bunker">
               <summary class="acc-details__summary">
-                Бункер — классический формат
+                Bunkurs — klasiskais formāts
                 <span class="acc-details__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-details__panel">
                 <div class="acc-details__content">
                   <p>
-                    Игра на выживание, где спасётся не самый громкий, а самый
-                    убедительный. Каждый игрок получает уникальную
-                    характеристику персонажа, и его главная задача — доказать,
-                    почему именно он достоин попасть в бункер и как сможет
-                    помочь человечеству справиться с надвигающейся катастрофой.
-                    Здесь не нужно врать — важно аргументировать, мыслить
-                    стратегически и чувствовать людей. Игра захватывает,
-                    объединяет и часто открывает участников с совершенно новой
-                    стороны.
+                    Izdzīvošanas spēle, kurā izglābsies nevis skaļākais, bet 
+                    pārliecinošākais. Katrs spēlētājs saņem unikālu tēla 
+                    raksturojumu, un viņa galvenais uzdevums ir pierādīt, 
+                    kāpēc tieši viņš ir pelnījis nokļūt bunkurā un kā varēs 
+                    palīdzēt cilvēcei tikt galā ar tuvojošos katastrofu. Šeit 
+                    nav jāmelo — ir svarīgi argumentēt, domāt stratēģiski un 
+                    just cilvēkus. Spēle aizrauj, vieno un bieži atklāj 
+                    dalībniekus no pavisam jaunas puses.
                   </p>
                 </div>
               </div>
@@ -418,78 +594,77 @@
       </section>
 
       <section class="why" id="why">
-        <div class="container">
-          <p class="why__label">Почему выбирают нас</p>
-          <h2 class="why__title">
-            Мы создаём опыт,<br />
-            а не просто проводим игры
-          </h2>
+  <div class="container">
+    <p class="why__label">Kāpēc izvēlēties mūs?</p>
+    <h2 class="why__title">
+      Mēs radām pieredzi,<br />
+      nevis tikai vadām spēles
+    </h2>
 
-          <div class="why__grid">
-            <div class="why-card">
-              <h3 class="why-card__title">Продюсерский подход</h3>
-              <p class="why-card__text">
-                Мы не работаем по шаблонам. Каждый вечер продумывается под
-                компанию, её настроение и цель мероприятия.
-              </p>
-            </div>
+    <div class="why__items">
+      <article class="why-item">
+        <h3 class="why-item__title">Producentu pieeja</h3>
+        <p class="why-item__text">
+          Mēs nestrādājam pēc šabloniem. Katrs formāts tiek pielāgots 
+          kompānijai, noskaņojumam un pasākuma mērķim! Mēs uzdodam 
+          ievirzošus jautājumus un priecājamies, kad stāstāt par savu 
+          uzņēmumu, lai mēs varētu izdomāt unikālus "knifus" tieši jums.
+        </p>
+      </article>
 
-            <div class="why-card">
-              <h3 class="why-card__title">Живое вовлечение</h3>
-              <p class="why-card__text">
-                Умеем мягко включать в процесс и активных гостей, и тех, кто
-                обычно остаётся в стороне.
-              </p>
-            </div>
+      <article class="why-item">
+        <h3 class="why-item__title">Dzīvīga un maiga iesaiste</h3>
+        <p class="why-item__text">
+          Mēs protam radīt dinamiku bez spiediena! Mēs noteikti nevienu 
+          nepiespiedīsim. Aktīvie viesi saņem telpu spēlei, bet mierīgākie 
+          — jūtas pārliecināti un dabiski iesaistās procesā.
+        </p>
+      </article>
 
-            <div class="why-card">
-              <h3 class="why-card__title">Опыт и интуиция</h3>
-              <p class="why-card__text">
-                За плечами — сотни мероприятий. Мы чувствуем зал, считываем
-                динамику и управляем атмосферой.
-              </p>
-            </div>
+      <article class="why-item">
+        <h3 class="why-item__title">Zāles un atmosfēras izjūta</h3>
+        <p class="why-item__text">
+          Mēs uzmanīgi nolasām grupas noskaņojumu un pārvaldām vakara tempu, 
+          lai tas "nenosēstos" un nenogurdinātu. Spēle attīstās organiski, 
+          un atmosfēra paliek dzīva un silta.
+        </p>
+      </article>
 
-            <div class="why-card">
-              <h3 class="why-card__title">Многоязычность</h3>
-              <p class="why-card__text">
-                Проводим мероприятия на русском, латышском и английском, включая
-                билингвальные форматы.
-              </p>
-            </div>
+      <article class="why-item">
+        <h3 class="why-item__title">Daudzvalodu formāts</h3>
+        <p class="why-item__text">
+          Mēs vadām pasākumus latviešu, krievu un angļu valodās, ieskaitot 
+          bilingvālus formātus — lai ikviens viesis justos vienlīdzīgs 
+          un neizkristu no procesa.
+        </p>
+      </article>
 
-            <div class="why-card">
-              <h3 class="why-card__title">Гибкость форматов</h3>
-              <p class="why-card__text">
-                Мы адаптируем сценарии под тайминг, площадку и состав гостей, а
-                не подгоняем гостей под формат.
-              </p>
-            </div>
+      <article class="why-item">
+        <h3 class="why-item__title">Elastība un komforts</h3>
+        <p class="why-item__text">
+          Mēs pielāgojam formātu cilvēkiem, nevis cilvēkus formātam. 
+          Ņemam vērā laiku, lokāciju un viesu sastāvu, lai vakars būtu 
+          ērts un loģisks visiem dalībniekiem.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
-            <div class="why-card">
-              <h3 class="why-card__title">Эмоции и память</h3>
-              <p class="why-card__text">
-                Наша цель — чтобы после мероприятия гости хотели повторить этот
-                опыт снова.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section class="reviews" id="reviews">
         <div class="container">
-          <p class="reviews__label">Что о нас говорят?</p>
-          <h2 class="reviews__title">Отзывы клиентов</h2>
+          <p class="reviews__label">Ko par mums saka?</p>
+          <h2 class="reviews__title">Klientu atsauksmes</h2>
 
-          <div class="reviews__track" aria-label="Отзывы">
+          <div class="reviews__track" aria-label="Atsauksmes">
             <article class="review-card">
               <p class="review-card__text">
-                “Да мне очень заходит ваш формат как вы проводите игры,
+                “Man tiešām ļoti patīk jūsu formāts, kā jūs vadāt spēles,
                 <strong
-                  >стоко смеха 😂 у нас даже мама одна другого ведущего
-                  предлагала, так как цена ниже, но Эля так же, как и я — не, мы
-                  Настю хотим 😃”
+                  >tik daudz smieklu 😂 mums pat viena mamma piedāvāja citu 
+                  vadītāju, jo cena bija zemāka, bet Eļa tāpat kā es — nē, 
+                  mēs gribam Nastju 😃”
                 </strong>
               </p>
 
@@ -498,19 +673,19 @@
                 type="button"
                 data-open-proof
                 data-proof-src="/proofs/proof-3.PNG"
-                data-proof-alt="Скриншот отзыва из Telegram"
+                data-proof-alt="Atsauksmes ekrānuzņēmums no Telegram"
               >
-                Показать оригинал
+                Rādīt oriģinālu
               </button>
             </article>
 
             <article class="review-card">
               <p class="review-card__text">
-                “Игра получилась супер классной 🔥🔥 Все активно играли,
-                <strong>даже те, кто первый раз играл</strong> 😊 Обстановка
-                была заряженной и очень живой, особенно тема с ролями прям
-                огонь, все очень вошли в свою роль и отыгрывали на все 100! 🤣🤣
-                Спасибо огромное! 💗 еще придем к тебе на игру 🥰”
+                “Spēle sanāca super forša 🔥🔥 Visi aktīvi spēlēja,
+                <strong>pat tie, kuri spēlēja pirmo reizi</strong> 😊 Gaisotne 
+                bija uzlādēta un ļoti dzīva, īpaši tēma ar lomām bija vienkārši 
+                uguns, visi tiešām iejutās savās lomās un nospēlēja uz visiem 100! 🤣🤣 
+                Liels paldies! 💗 vēl atnāksim pie tevis uz spēli 🥰”
               </p>
 
               <button
@@ -518,20 +693,20 @@
                 type="button"
                 data-open-proof
                 data-proof-src="/proofs/proof-8.PNG"
-                data-proof-alt="Скриншот отзыва из Telegram"
+                data-proof-alt="Atsauksmes ekrānuzņēmums no Telegram"
               >
-                Показать оригинал
+                Rādīt oriģinālu
               </button>
             </article>
 
             <article class="review-card">
               <p class="review-card__text">
-                “Вчера у нас был корпоратив, не смогла сразу ответить 🙏 Большое
-                спасибо за вашу работу!
+                “Vakar mums bija korporatīvais pasākums, nevarēju uzreiz atbildēt 🙏 
+                Liels paldies par jūsu darbu!
                 <strong
-                  >Диана замечательная, нам было очень весело вместе. 🥳 Очень
-                  рада с тобой сотрудничать и приятно, что рядом всегда есть
-                  ответственные люди ❤️”</strong
+                  >Diāna ir brīnišķīga, mums bija ļoti jautri kopā. 🥳 Ļoti 
+                  priecājos ar tevi sadarboties un ir patīkami, ka blakus 
+                  vienmēr ir atbildīgi cilvēki ❤️”</strong
                 >
               </p>
 
@@ -540,16 +715,16 @@
                 type="button"
                 data-open-proof
                 data-proof-src="/proofs/proof-5.PNG"
-                data-proof-alt="Скриншот отзыва из Telegram"
+                data-proof-alt="Atsauksmes ekrānuzņēmums no Telegram"
               >
-                Показать оригинал
+                Rādīt oriģinālu
               </button>
             </article>
 
             <article class="review-card">
               <p class="review-card__text">
-                Спасибо, что приняли в свою теплую компанию тех неопытных,
-                <strong>кто играет первые разы 🤗☀️”</strong>
+                Paldies, ka uzņēmāt savā siltajā kompānijā tos nepieredzējušos, 
+                <strong>kuri spēlē pirmo reizi 🤗☀️”</strong>
               </p>
 
               <button
@@ -557,17 +732,17 @@
                 type="button"
                 data-open-proof
                 data-proof-src="/proofs/proof-13.PNG"
-                data-proof-alt="Скриншот отзыва из Telegram"
+                data-proof-alt="Atsauksmes ekrānuzņēmums no Telegram"
               >
-                Показать оригинал
+                Rādīt oriģinālu
               </button>
             </article>
 
             <article class="review-card">
               <p class="review-card__text">
-                “Вправду
-                <strong>с каждым разом всё круче и круче!</strong> Входить в
-                роль мафии становится всё легче и легче 😂🔥”
+                “Patiesi
+                <strong>ar katru reizi viss ir arvien foršāk!</strong> Iejusties 
+                mafijas lomā kļūst arvien vieglāk 😂🔥”
               </p>
 
               <button
@@ -575,18 +750,18 @@
                 type="button"
                 data-open-proof
                 data-proof-src="/proofs/proof-11.PNG"
-                data-proof-alt="Скриншот отзыва из Telegram"
+                data-proof-alt="Atsauksmes ekrānuzņēmums no Telegram"
               >
-                Показать оригинал
+                Rādīt oriģinālu
               </button>
             </article>
 
             <article class="review-card">
               <p class="review-card__text">
-                “Диана, привет!
-                <strong>Спасибо за прекрасный, весёлый вечер!</strong> Я
-                надеюсь, что моя шумная компания не создавала проблем в
-                проведении мероприятия:)”
+                “Diāna, čau!
+                <strong>Paldies par brīnišķīgo, jautro vakaru!</strong> Es 
+                ceru, ka mana skaļā kompānija neradīja problēmas pasākuma 
+                vadīšanā:)”
               </p>
 
               <button
@@ -594,9 +769,9 @@
                 type="button"
                 data-open-proof
                 data-proof-src="/proofs/proof-14.PNG"
-                data-proof-alt="Скриншот отзыва из Telegram"
+                data-proof-alt="Atsauksmes ekrānuzņēmums no Telegram"
               >
-                Показать оригинал
+                Rādīt oriģinālu
               </button>
             </article>
           </div>
@@ -608,89 +783,42 @@
               class="proof__close"
               type="button"
               data-proof-close
-              aria-label="Закрыть"
+              aria-label="Aizvērt"
             >
               ✕
             </button>
 
             <figure class="proof__figure">
               <img class="proof__img" src="" alt="" />
-              <figcaption class="proof__cap">Оригинал отзыва</figcaption>
+              <figcaption class="proof__cap">Atsauksmes oriģināls</figcaption>
             </figure>
           </div>
 
           <form method="dialog" class="proof__backdrop">
-            <button aria-label="Закрыть"></button>
+            <button aria-label="Aizvērt"></button>
           </form>
         </dialog>
       </section>
 
-      <!-- <section class="prices" id="prices">
-        <div class="container">
-          <p class="prices__label">сколько стоит?</p>
-          <h2 class="prices__title">Цены</h2>
-
-          <div class="prices__grid">
-            <article class="price-card price-card--featured">
-              <h3 class="price-card__title">Party Mafia</h3>
-              <p class="price-card__value">80 € / час</p>
-              <p class="price-card__desc">
-                Фирменный формат, максимум вовлечения
-              </p>
-              <a class="price-card__btn" href="#contact">Обсудить</a>
-            </article>
-
-            <article class="price-card price-card--featured">
-              <h3 class="price-card__title">Bunker Immersive</h3>
-              <p class="price-card__value">80–90 € / час</p>
-              <p class="price-card__desc">Сюжет и роли, больше “киношности”</p>
-              <a class="price-card__btn" href="#contact">Обсудить</a>
-            </article>
-            <article class="price-card">
-              <h3 class="price-card__title">Classic Mafia</h3>
-              <p class="price-card__value">60 € / час</p>
-              <p class="price-card__desc">
-                Классический формат для любой компании
-              </p>
-              <a class="price-card__btn" href="#contact">Обсудить</a>
-            </article>
-
-            <article class="price-card">
-              <h3 class="price-card__title">Bunker Classic</h3>
-              <p class="price-card__value">60 € / час</p>
-              <p class="price-card__desc">
-                Выживание, логика, командная динамика
-              </p>
-              <a class="price-card__btn" href="#contact">Обсудить</a>
-            </article>
-          </div>
-
-          <p class="prices__note">
-            Цены без НДС. Услуга + дорога. Итог зависит от даты, локации и языка
-            проведения.
-          </p>
-        </div>
-      </section> -->
-
       <section class="faq" id="faq">
         <div class="container">
-          <p class="faq__label">Часто задаваемые вопросы</p>
+          <p class="faq__label">Biežāk uzdotie jautājumi</p>
           <h2 class="faq__title">FAQ</h2>
 
           <div class="accordion accordion--faq" id="faq-accordion">
             <details class="acc-faq acc-trigger" id="faq-duration">
               <summary class="acc-faq__summary">
-                Сколько длится игра?
+                Cik ilgi ilgst spēle?
                 <span class="acc-faq__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-faq__panel">
                 <div class="acc-faq__content">
                   <p>
-                    Зависит от количества участников и их настроя. Мы всегда
-                    уточняем у клиентов был ли до этого опыт подобных игр и
-                    какие ожидания на этот вечер. Ведущие стараются подстроится
-                    под тайминг, если такой был обозначен.
+                    Tas ir atkarīgs no dalībnieku skaita un viņu noskaņojuma. 
+                    Mēs vienmēr precizējam pie klientiem, vai iepriekš ir bijusi 
+                    pieredze ar šādām spēlēm un kādas ir gaidas no vakara. 
+                    Vadītāji cenšas pielāgoties laika rāmim, ja tāds ir norādīts.
                   </p>
                 </div>
               </div>
@@ -698,121 +826,84 @@
 
             <details class="acc-faq acc-trigger" id="faq-guests">
               <summary class="acc-faq__summary">
-                Для какого количества гостей игра в мафию?
+                Cik viesu var spēlēt mafiju?
                 <span class="acc-faq__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-faq__panel">
                 <div class="acc-faq__content">
                   <p>
-                    От 6 до 25, заранее проговариваем этот момент и обговариваем
-                    динамику игры
+                    No 6 līdz 25 personām. Iepriekš saskaņojam šo punktu un 
+                    pārrunājam spēles dinamiku.
                   </p>
                 </div>
               </div>
             </details>
 
-            <details class="acc-faq acc-trigger" id="faq-guests">
+            <details class="acc-faq acc-trigger" id="faq-langs">
               <summary class="acc-faq__summary">
-                На каких языках проводятся мероприятия?
+                Kādās valodās tiek vadīti pasākumi?
                 <span class="acc-faq__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-faq__panel">
                 <div class="acc-faq__content">
                   <p>
-                    На латышском, английском и русском языках. Возможно и
-                    билингвальное проведение.
+                    Latviešu, angļu un krievu valodās. Iespējama arī bilingvāla 
+                    vadīšana.
                   </p>
                 </div>
               </div>
             </details>
 
-            <details class="acc-faq acc-trigger" id="faq-guests">
+            <details class="acc-faq acc-trigger" id="faq-bunker-guests">
               <summary class="acc-faq__summary">
-                Какое количество игроков могут играть в бункер?
+                Cik spēlētāju var spēlēt bunkuru?
                 <span class="acc-faq__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-faq__panel">
                 <div class="acc-faq__content">
                   <p>
-                    От 5 до 20, заранее обговариваем этот момент и обговариваем
-                    динамику игры.
+                    No 5 līdz 20 personām. Iepriekš saskaņojam šo punktu un 
+                    pārrunājam spēles dinamiku.
                   </p>
                 </div>
               </div>
             </details>
 
-            <details class="acc-faq acc-trigger" id="faq-guests">
+            <details class="acc-faq acc-trigger" id="faq-travel">
               <summary class="acc-faq__summary">
-                Входят ли дорожные расходы в цену?
+                Vai ceļa izdevumi ir iekļauti cenā?
                 <span class="acc-faq__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-faq__panel">
                 <div class="acc-faq__content">
                   <p>
-                    Нет, дорожные расходы оплачиваются отдельно в зависимости от
-                    локации. По Риге берем только за парковку.
+                    Nē, ceļa izdevumi tiek apmaksāti atsevišķi atkarībā no 
+                    lokācijas. Rīgas robežās ņemam samaksu tikai par stāvvietu.
                   </p>
                 </div>
               </div>
             </details>
 
-            <details class="acc-faq acc-trigger" id="faq-guests">
+            <details class="acc-faq acc-trigger" id="faq-kids">
               <summary class="acc-faq__summary">
-                Вы проводите игры детям?
+                Vai jūs vadāt spēles bērniem?
                 <span class="acc-faq__icon" aria-hidden="true">+</span>
               </summary>
 
               <div class="acc-faq__panel">
                 <div class="acc-faq__content">
                   <p>
-                    Да, начиная от 8 лет. Но если нужны программы для более
-                    маленьких деток у нас есть партнеры и мы можем помочь вам с
-                    организацией и детского праздника.
+                    Jā, sākot no 8 gadu vecuma. Bet, ja nepieciešamas programmas 
+                    mazākiem bērniem, mums ir partneri un mēs varam jums 
+                    palīdzēt arī ar bērnu ballītes organizēšanu.
                   </p>
                 </div>
               </div>
             </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="gallery" id="gallery">
-        <div class="container">
-          <p class="gallery__label">Атмосфера</p>
-          <div class="gallery__head">
-            <h2 class="gallery__title">Галерея</h2>
-
-            <div class="gallery__controls">
-              <button
-                class="gallery__nav gallery__nav--prev"
-                type="button"
-                aria-label="Назад"
-              >
-                ←
-              </button>
-              <button
-                class="gallery__nav gallery__nav--next"
-                type="button"
-                aria-label="Вперёд"
-              >
-                →
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="swiper gallery__swiper"
-            aria-label="Фотографии с мероприятий"
-          >
-            <div class="swiper-wrapper">
-              <!-- Слайды добавим JS-ом, чтобы менять фотки было проще -->
-            </div>
-
-            <div class="gallery__pagination"></div>
           </div>
         </div>
       </section>
@@ -820,12 +911,12 @@
       <section class="contact" id="booking">
         <div class="container">
           <div class="contact__card">
-            <p class="contact__kicker">Связаться</p>
+            <p class="contact__kicker">Sazināties</p>
 
-            <h2 class="contact__title">Забронировать мероприятие</h2>
+            <h2 class="contact__title">Rezervēt pasākumu</h2>
 
             <p class="contact__text">
-              Напиши туда, где тебе удобнее. Ответим быстро и уточним детали.
+              Raksti tur, kur tev ir ērtāk. Atbildēsim ātri un precizēsim detaļas.
             </p>
 
             <div class="contact__actions">
@@ -837,7 +928,7 @@
               >
                 <span class="cbtn__icon" aria-hidden="true"></span>
                 <span class="cbtn__label">WhatsApp</span>
-                <span class="cbtn__meta">Самый быстрый ответ</span>
+                <span class="cbtn__meta">Ātrākā atbilde</span>
               </a>
 
               <a
@@ -848,11 +939,11 @@
               >
                 <span class="cbtn__icon" aria-hidden="true"></span>
                 <span class="cbtn__label">Instagram</span>
-                <span class="cbtn__meta">Можно с примерами</span>
+                <span class="cbtn__meta">Pieejami piemēri</span>
               </a>
             </div>
 
-            <p class="contact__note">* Выезд и дорога считаются отдельно.</p>
+            <p class="contact__note">* Izbraukums un ceļš tiek rēķināts atsevišķi.</p>
           </div>
         </div>
       </section>
@@ -865,7 +956,7 @@
           <p class="footer__meta">Let's Party - Produced by Dynasty Events</p>
         </div>
 
-        <div class="footer__links" aria-label="Контакты">
+        <div class="footer__links" aria-label="Kontakti">
           <a
             class="footer__link"
             href="https://instagram.com/letsparty.lv"
@@ -885,7 +976,7 @@
         </div>
 
         <p class="footer__copy">
-          © <span id="year"></span> Let’s Party. All rights reserved.
+          © <span id="year"></span> Let’s Party. Visas tiesības aizsargātas.
         </p>
       </div>
     </footer>
