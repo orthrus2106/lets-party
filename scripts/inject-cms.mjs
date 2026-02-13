@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const __dirname = path.resolve();
+const contactsPath = path.join(__dirname, 'public/content/contacts.json');
 
 const pages = [
   {
@@ -56,10 +57,15 @@ pages.forEach((page) => {
     console.warn(`⚠️ Пропуск: JSON с данными не найден по пути ${jsonPath}`);
     return;
   }
+  if (!fs.existsSync(contactsPath)) {
+    console.warn(`⚠️ Пропуск: JSON с контактами не найден по пути ${contactsPath}`);
+    return;
+  }
 
   try {
     let html = fs.readFileSync(templatePath, 'utf8');
     const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+    const contacts = JSON.parse(fs.readFileSync(contactsPath, 'utf8'));
 
     // 1. Внедрение цен
     if (data.prices) {
@@ -87,8 +93,8 @@ pages.forEach((page) => {
       });
     }
 
-    // 3. Внедрение контактов
-    html = replaceObjectPlaceholders(html, 'contacts', data.contacts);
+    // 3. Внедрение общих контактов
+    html = replaceObjectPlaceholders(html, 'contacts', contacts);
 
     // 4. Внедрение FAQ
     if (data.faq && html.includes('{{faq_items}}')) {

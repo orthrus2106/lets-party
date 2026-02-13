@@ -40,23 +40,6 @@ collections:
                 ],
             }
           - {
-              label: 'Контакты',
-              name: 'contacts',
-              widget: 'object',
-              fields:
-                [
-                  { label: 'Подзаголовок', name: 'kicker', widget: 'string' },
-                  { label: 'Заголовок', name: 'title', widget: 'string' },
-                  { label: 'Текст', name: 'text', widget: 'text' },
-                  { label: 'Примечание', name: 'note', widget: 'string' },
-                  {
-                    label: 'ARIA подпись футера',
-                    name: 'footer_links_aria',
-                    widget: 'string',
-                  },
-                ],
-            }
-          - {
               label: 'Описания форматов (Аккордеоны)',
               name: 'formats',
               widget: 'object',
@@ -170,3 +153,27 @@ collections:
         label: 'Latviešu versija'
         name: 'lv'
         fields: *fields
+  - name: 'settings'
+    label: 'Общие настройки'
+    files:
+      - file: 'public/content/contacts.json'
+        label: 'Контакты (общие)'
+        name: 'contacts'
+        fields:
+          - { label: 'Телефон (текст)', name: 'phone_text', widget: 'string' }
+          - { label: 'Ссылка на телефон (tel:)', name: 'phone_tel_url', widget: 'string' }
+          - {
+              label: 'Ссылка WhatsApp',
+              name: 'whatsapp_url',
+              widget: 'string',
+            }
+          - {
+              label: 'Instagram (текст)',
+              name: 'instagram_text',
+              widget: 'string',
+            }
+          - {
+              label: 'Ссылка Instagram',
+              name: 'instagram_url',
+              widget: 'string',
+            }
