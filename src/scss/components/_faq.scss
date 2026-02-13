@@ -1,11 +1,13 @@
+@use '../variables' as *;
+
 .faq {
-  @extend .section;
+  @include section;
 
   &__title {
     margin-bottom: $sp-5;
   }
   &__label {
-    @extend .kicker;
+    @include kicker;
   }
 }
 

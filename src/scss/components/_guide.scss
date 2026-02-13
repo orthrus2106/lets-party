@@ -1,8 +1,10 @@
+@use '../variables' as *;
+
 .guide {
-  @extend .section;
+  @include section;
 
   &__label {
-    @extend .kicker;
+    @include kicker;
   }
 
   &__title {
@@ -88,11 +90,11 @@
 }
 
 .features {
-  @extend .section;
+  @include section;
   background: rgba($color-bg, 0.5); // Легкое отличие фона от соседней секции
 
   &__label {
-    @extend .kicker;
+    @include kicker;
   }
 
   &__title {

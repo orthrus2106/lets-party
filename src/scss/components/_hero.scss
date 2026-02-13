@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -101,8 +103,8 @@
   }
 
   &__button {
-    @extend .btn;
-    @extend .btn--outline;
+    @include button-base;
+    @include button-outline;
   }
 
   &__link {

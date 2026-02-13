@@ -1,5 +1,7 @@
+@use '../variables' as *;
+
 .about {
-  @extend .section;
+  @include section;
 
   &__grid {
     display: grid;
@@ -18,7 +20,7 @@
   }
 
   &__kicker {
-    @extend .kicker;
+    @include kicker;
     margin-bottom: $sp-2;
   }
 

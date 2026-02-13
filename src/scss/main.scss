@@ -1,19 +1,19 @@
-@import 'variables';
-@import 'reset';
-@import 'base';
+@use 'variables' as *;
+@use 'reset';
+@use 'base';
 
 // Components
 
-@import 'components/header';
-@import 'components/hero';
-@import 'components/formats';
-@import 'components/why';
-@import 'components/details';
-@import 'components/gallery';
-@import 'components/guide';
-@import 'components/about';
-@import 'components/reviews';
-@import 'components/prices';
-@import 'components/faq';
-@import 'components/contacts';
-@import 'components/footer';
+@use 'components/header';
+@use 'components/hero';
+@use 'components/formats';
+@use 'components/why';
+@use 'components/details';
+@use 'components/gallery';
+@use 'components/guide';
+@use 'components/about';
+@use 'components/reviews';
+@use 'components/prices';
+@use 'components/faq';
+@use 'components/contacts';
+@use 'components/footer';

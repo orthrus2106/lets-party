@@ -5,156 +5,190 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const headerEl = document.querySelector('.header');
-
-const lockBody = (lock) => {
-  document.body.classList.toggle('body--locked', lock);
+const SELECTORS = {
+  header: '.header',
+  burger: '.burger',
+  menu: '.menu',
+  detailsTrigger: '.acc-trigger',
+  accLink: 'a[data-acc]',
+  proofDialog: '#proof',
+  proofImg: '.proof__img',
+  proofClose: '[data-proof-close]',
+  proofOpen: '[data-open-proof]',
+  gallerySlider: '.gallery__slider',
+  galleryWrapper: '#gallery-wrapper',
+  galleryImage: '.gallery__slide-img',
+  year: '#year',
 };
 
-window.addEventListener('scroll', () => {
+const CLASSES = {
+  bodyLocked: 'body--locked',
+  headerScrolled: 'header--scrolled',
+  burgerOpen: 'burger--open',
+  menuOpen: 'menu--open',
+  portraitContain: 'is-contain',
+};
+
+const ATTRS = {
+  ariaExpanded: 'aria-expanded',
+  ariaHidden: 'aria-hidden',
+};
+
+function qs(selector, root = document) {
+  return root.querySelector(selector);
+}
+
+function qsa(selector, root = document) {
+  return Array.from(root.querySelectorAll(selector));
+}
+
+function setBodyLocked(locked) {
+  document.body.classList.toggle(CLASSES.bodyLocked, locked);
+}
+
+function initHeaderScrollState() {
+  const headerEl = qs(SELECTORS.header);
   if (!headerEl) return;
-  headerEl.classList.toggle('header--scrolled', window.scrollY > 30);
-});
 
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
+  const updateHeaderState = () => {
+    headerEl.classList.toggle(CLASSES.headerScrolled, window.scrollY > 30);
+  };
 
-if (burger && menu) {
-  const OPEN_BURGER = 'burger--open';
-  const OPEN_MENU = 'menu--open';
+  updateHeaderState();
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+}
+
+function initMobileMenu() {
+  const burger = qs(SELECTORS.burger);
+  const menu = qs(SELECTORS.menu);
+
+  if (!burger || !menu) return;
 
   const setMenuOpen = (open) => {
-    burger.classList.toggle(OPEN_BURGER, open);
-    menu.classList.toggle(OPEN_MENU, open);
+    burger.classList.toggle(CLASSES.burgerOpen, open);
+    menu.classList.toggle(CLASSES.menuOpen, open);
 
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    burger.setAttribute(ATTRS.ariaExpanded, open ? 'true' : 'false');
+    menu.setAttribute(ATTRS.ariaHidden, open ? 'false' : 'true');
 
-    lockBody(open);
+    setBodyLocked(open);
   };
 
   burger.addEventListener('click', () => {
-    setMenuOpen(!menu.classList.contains(OPEN_MENU));
+    setMenuOpen(!menu.classList.contains(CLASSES.menuOpen));
   });
 
-  menu.addEventListener('click', (e) => {
-    if (e.target.closest('[data-menu-close]')) {
+  menu.addEventListener('click', (event) => {
+    if (event.target.closest('[data-menu-close]')) {
       setMenuOpen(false);
       return;
     }
 
-    const link = e.target.closest('a[href^="#"]');
-    if (link) setMenuOpen(false);
+    if (event.target.closest('a[href^="#"]')) {
+      setMenuOpen(false);
+    }
   });
 }
 
-const detailsList = Array.from(document.querySelectorAll('.acc-trigger'));
+function initAccordions() {
+  const detailsList = qsa(SELECTORS.detailsTrigger);
+  if (!detailsList.length) return;
 
-detailsList.forEach((detail) => {
-  detail.addEventListener('click', () => {
-    detailsList.forEach((d) => {
-      if (d !== detail) {
-        d.removeAttribute('open');
-      }
+  detailsList.forEach((detail) => {
+    detail.addEventListener('click', () => {
+      detailsList.forEach((otherDetail) => {
+        if (otherDetail !== detail) {
+          otherDetail.removeAttribute('open');
+        }
+      });
     });
   });
-});
 
-document.addEventListener('click', (e) => {
-  const link = e.target.closest('a[data-acc]');
-  if (!link) return;
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest(SELECTORS.accLink);
+    if (!link) return;
 
-  const id = link.dataset.acc;
-  if (!id) return;
+    const id = link.dataset.acc;
+    if (!id) return;
 
-  const target = document.getElementById(id);
-  if (!target || target.tagName !== 'DETAILS') return;
+    const target = document.getElementById(id);
+    if (!target || target.tagName !== 'DETAILS') return;
 
-  detailsList.forEach((d) => {
-    d.removeAttribute('open');
-  });
-
-  target.setAttribute('open', true);
-});
-
-const proofDialog = document.querySelector('#proof');
-const proofImg = proofDialog?.querySelector('.proof__img');
-const proofClose = proofDialog?.querySelector('[data-proof-close]');
-
-const canUseDialog =
-  typeof HTMLDialogElement !== 'undefined' &&
-  typeof proofDialog?.showModal === 'function';
-
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('[data-open-proof]');
-  if (!btn) return;
-
-  const src = btn.dataset.proofSrc;
-  const alt = btn.dataset.proofAlt || 'Оригинал отзыва';
-  if (!src) return;
-
-  if (!canUseDialog) {
-    window.open(src, '_blank', 'noopener,noreferrer');
-    return;
-  }
-
-  if (proofImg) {
-    proofImg.src = src;
-    proofImg.alt = alt;
-  }
-
-  proofDialog.showModal();
-});
-
-proofClose?.addEventListener('click', () => {
-  proofDialog?.close();
-});
-
-proofDialog?.addEventListener('close', () => {
-  if (!proofImg) return;
-  proofImg.src = '';
-  proofImg.alt = '';
-});
-
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-// --- ГАЛЕРЕЯ И SWIPER ---
-
-// 1. Функция проверки ориентации фото (теперь ищет правильный класс)
-function markPortraitImages(root) {
-  const imgs = root.querySelectorAll('.gallery__slide-img'); // Обновлен класс
-  imgs.forEach((img) => {
-    const apply = () => {
-      const isPortrait = img.naturalHeight > img.naturalWidth;
-      img.classList.toggle('is-contain', isPortrait);
-    };
-    if (img.complete) apply();
-    else img.addEventListener('load', apply, { once: true });
+    detailsList.forEach((detail) => detail.removeAttribute('open'));
+    target.setAttribute('open', '');
   });
 }
 
-// 2. Инициализация галереи
-async function initDynamicGallery() {
-  const sliderEl = document.querySelector('.gallery__slider'); // Обновлен селектор
-  const wrapper = document.getElementById('gallery-wrapper');
+function initProofDialog() {
+  const proofDialog = qs(SELECTORS.proofDialog);
+  if (!proofDialog) return;
 
-  if (!wrapper || !sliderEl) return;
+  const proofImg = qs(SELECTORS.proofImg, proofDialog);
+  const proofClose = qs(SELECTORS.proofClose, proofDialog);
 
-  const lang = document.documentElement.lang || 'ru';
-  const contentPath = `/content/${lang}.json`;
+  const canUseDialog =
+    typeof HTMLDialogElement !== 'undefined' &&
+    typeof proofDialog.showModal === 'function';
 
-  try {
-    const response = await fetch(contentPath);
-    if (!response.ok) throw new Error(`Failed to load ${contentPath}`);
+  document.addEventListener('click', (event) => {
+    const trigger = event.target.closest(SELECTORS.proofOpen);
+    if (!trigger) return;
 
-    const data = await response.json();
-    if (!data.gallery) return;
+    const src = trigger.dataset.proofSrc;
+    const alt = trigger.dataset.proofAlt || 'Оригинал отзыва';
+    if (!src) return;
 
-    // Генерируем слайды с новыми классами
-    wrapper.innerHTML = data.gallery
-      .map(
-        (item) => `
+    if (!canUseDialog) {
+      window.open(src, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
+    if (proofImg) {
+      proofImg.src = src;
+      proofImg.alt = alt;
+    }
+
+    proofDialog.showModal();
+  });
+
+  proofClose?.addEventListener('click', () => proofDialog.close());
+
+  proofDialog.addEventListener('close', () => {
+    if (!proofImg) return;
+    proofImg.src = '';
+    proofImg.alt = '';
+  });
+}
+
+function initCurrentYear() {
+  const yearEl = qs(SELECTORS.year);
+  if (!yearEl) return;
+
+  yearEl.textContent = String(new Date().getFullYear());
+}
+
+function markPortraitImages(root) {
+  const images = qsa(SELECTORS.galleryImage, root);
+
+  images.forEach((image) => {
+    const applyOrientationClass = () => {
+      const isPortrait = image.naturalHeight > image.naturalWidth;
+      image.classList.toggle(CLASSES.portraitContain, isPortrait);
+    };
+
+    if (image.complete) {
+      applyOrientationClass();
+      return;
+    }
+
+    image.addEventListener('load', applyOrientationClass, { once: true });
+  });
+}
+
+function createGallerySlides(gallery) {
+  return gallery
+    .map(
+      (item) => `
       <div class="swiper-slide">
         <figure class="gallery__frame">
           <img class="gallery__slide-img" src="${item.image}" alt="${item.caption}" loading="lazy" decoding="async" />
@@ -162,21 +196,39 @@ async function initDynamicGallery() {
         </figure>
       </div>
     `,
-      )
-      .join('');
+    )
+    .join('');
+}
 
+async function initDynamicGallery() {
+  const sliderEl = qs(SELECTORS.gallerySlider);
+  const wrapper = qs(SELECTORS.galleryWrapper);
+
+  if (!sliderEl || !wrapper) return;
+
+  const lang = document.documentElement.lang || 'ru';
+  const contentPath = `/content/${lang}.json`;
+
+  try {
+    const response = await fetch(contentPath);
+    if (!response.ok) {
+      throw new Error(`Failed to load ${contentPath}`);
+    }
+
+    const data = await response.json();
+    if (!Array.isArray(data.gallery) || data.gallery.length === 0) return;
+
+    wrapper.innerHTML = createGallerySlides(data.gallery);
     markPortraitImages(wrapper);
 
-    // Инициализация Swiper с актуальными селекторами
     new Swiper(sliderEl, {
-      // Убедись, что модули Navigation и Pagination подключены в твоем билде
       modules: [Navigation, Pagination, A11y],
       loop: true,
       speed: 800,
       slidesPerView: 1,
       spaceBetween: 20,
       navigation: {
-        nextEl: '.gallery__nav--next', // Исправлено (в HTML тоже проверь этот класс)
+        nextEl: '.gallery__nav--next',
         prevEl: '.gallery__nav--prev',
       },
       pagination: {
@@ -184,11 +236,20 @@ async function initDynamicGallery() {
         clickable: true,
       },
       a11y: true,
-      grabCursor: true, // Добавит иконку "руки" при наведении
+      grabCursor: true,
     });
-  } catch (err) {
-    console.error('Ошибка загрузки галереи:', err);
+  } catch (error) {
+    console.error('Ошибка загрузки галереи:', error);
   }
 }
 
-initDynamicGallery();
+function initApp() {
+  initHeaderScrollState();
+  initMobileMenu();
+  initAccordions();
+  initProofDialog();
+  initCurrentYear();
+  initDynamicGallery();
+}
+
+initApp();

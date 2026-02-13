@@ -1,5 +1,7 @@
+@use '../variables' as *;
+
 .contact {
-  @extend .section;
+  @include section;
   margin-bottom: $sp-6;
   &__card {
     position: relative;
@@ -30,7 +32,7 @@
   }
 
   &__kicker {
-    @extend .kicker;
+    @include kicker;
   }
 
   &__title {

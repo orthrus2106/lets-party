@@ -1,10 +1,12 @@
+@use '../variables' as *;
+
 .reviews {
   position: relative;
 
-  @extend .section;
+  @include section;
 
   &__label {
-    @extend .kicker;
+    @include kicker;
   }
 
   &__title {

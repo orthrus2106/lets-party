@@ -1,8 +1,10 @@
+@use '../variables' as *;
+
 .why {
-  @extend .section;
+  @include section;
 
   &__label {
-    @extend .kicker;
+    @include kicker;
   }
 
   &__title {

@@ -1,10 +1,12 @@
+@use '../variables' as *;
+
 .prices {
   position: relative;
   overflow: hidden;
-  @extend .section;
+  @include section;
 
   &__label {
-    @extend .kicker;
+    @include kicker;
   }
 
   &__title {
