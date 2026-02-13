@@ -133,6 +133,17 @@
     }
   }
 
+  &__cta {
+    margin-top: $sp-3;
+    font-size: $fs-small;
+    color: $color-accent;
+    font-weight: $fw-semibold;
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+  }
+
   &[open] &__content {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: $sp-4;

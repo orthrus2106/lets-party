@@ -2,7 +2,6 @@
 <html lang="lv">
   <head>
     <meta charset="UTF-8" />
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -27,6 +26,7 @@
           <p class="header__text">Let's Party</p>
         </a>
 
+        <!-- DESKTOP NAV  -->
         <nav class="header__nav nav" aria-label="Navigācija">
           <ul class="nav__list">
             <li class="nav__item">
@@ -42,7 +42,7 @@
               <a class="nav__link" href="#reviews">Atsauksmes</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#faq">FAQ</a>
+              <a class="nav__link" href="#faq">BUJ</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#booking">Kontakti</a>
@@ -67,6 +67,7 @@
         </button>
       </div>
 
+      <!-- MOBILE MENU -->
       <div class="menu" id="menu" aria-hidden="true">
         <button
           class="menu__overlay"
@@ -87,7 +88,7 @@
             <li><a class="menu__link" href="#formats">Formāti</a></li>
             <li><a class="menu__link" href="#extras">Papildus</a></li>
             <li><a class="menu__link" href="#reviews">Atsauksmes</a></li>
-            <li><a class="menu__link" href="#faq">FAQ</a></li>
+            <li><a class="menu__link" href="#faq">BUJ</a></li>
             <li><a class="menu__link" href="#booking">Kontakti</a></li>
           </ul>
         </nav>
@@ -101,79 +102,24 @@
             <h1 class="hero__title">
               LET'S <span>PARTY</span> — <br />
               <small class="hero__subtitle"
-                >Tava ballīte sākas ar mums</small
+                >Tava ballīte sākas šeit</small
               >
             </h1>
             <p class="hero__lead">
-              Mafija un Bunkurs kā producentu pieredze: vadītājs, scenārijs, atmosfēra 
-              un viesu iesaiste.
+              Programmas un spēles jūsu svētkiem Rīgā. Ar vadītāju dzimšanas dienām, korporatīvajiem pasākumiem un draugu kompānijām no 6 līdz 50 personām sākot no <strong>60 € / stundā</strong>
             </p>
 
+            <!-- <ul class="hero__chips">
+              <li>RU / LV / EN</li>
+              <li>Izbraukums uz jūsu norises vietu</li>
+              <li>Mafia / Bunker</li>
+            </ul> -->
+
             <div class="hero__actions">
-              <a class="hero__button btn" href="#booking">Apspriežam formātu</a>
+              <a class="hero__button btn" href="#booking">Rezervēt datumu</a>
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="about" id="about">
-        <div class="container">
-          <div class="about__grid">
-            <div class="about__text">
-              <p class="about__kicker">Kas mēs esam</p>
-
-              <h2 class="about__title">Mēs neradām spēles — mēs radām pieredzi</h2>
-
-              <div class="about__body">
-                <p>
-                  <strong>Let’s Party</strong> — ir projekts, kas dzimis no 
-                  draudzības, enerģijas un mīlestības pret dzīvīgiem svētkiem.
-                </p>
-
-                <p>
-                  Mēs esam Anastasija un Diāna, divas draudzenes, kuras kopš bērnības ir 
-                  bijušas visu pasākumu centrā: aktieru pulciņš, skolas svētki, 
-                  scenāriji un ballītes draugiem — vienkārši tāpēc, ka mums tas 
-                  patiešām interesēja.
-                </p>
-
-                <p>
-                  Vēl astotajā klasē pēc izrādes iestudēšanas mēs izdomājām nosaukumu 
-                  <strong>Dynasty</strong>, savienojot mūsu vārdus un sapni par savu 
-                  uzņēmumu. 2025. gadā šis sapnis ieguva svētku aģentūras formu — 
-                  <strong>Dynasty Events</strong>. Bet sākt mēs nolēmām ar 
-                  projektu Let’s Party.
-                </p>
-
-                <p>
-                  <strong>Anastasija</strong> — projekta līdzdibinātāja un vadītāja 
-                  kopš 2022. gada, ar vairāk nekā 500 pasākumu pieredzi. Viņai ir 
-                  svarīgi nevis "atstrādāt formātu", bet gan radīt atmosfēru, kas 
-                  atbilst tieši šai kompānijai.
-                </p>
-
-                <p>
-                  <strong>Diāna</strong> — līdzdibinātāja ar uzņēmējdarbības pieredzi 
-                  kopš 2020. gada. Viņa viegli atrod pieeju jebkuram cilvēkam, prot 
-                  aizraut, vienoties un radīt komfortablu, dzīvu atmosfēru.
-                </p>
-
-                <p class="about__note">
-                  Mēs esam vienādas pēc "vibe", enerģijas un attieksmes pret darbu — 
-                  un tieši tas padara mūsu komandu vienotu.
-                </p>
-              </div>
-            </div>
-
-            <div class="about__media">
-  <div class="about__slider swiper" aria-label="Let’s Party Galerija">
-    <div class="swiper-wrapper" id="gallery-wrapper">
-      </div>
-
-    <button class="about__nav about__nav--prev" type="button" aria-label="Iepriekšējais foto"></button>
-    <button class="about__nav about__nav--next" type="button" aria-label="Nākamais foto"></button>
-  </div>
-</div>
       </section>
 
       <section class="formats" id="formats">
@@ -187,14 +133,20 @@
           {{prices.party_mafia}}
         </div>
         <h3 class="format-card__title">Party Mafia</h3>
-        <p class="format-card__hook">Pilnvērtīgs scenārijs jūsu svētku programmai sākot no 3 stundām.</p>
+        <p class="format-card__hook">Pilnvērtīgs scenārijs jūsu svētku programmai, sākot no 3 stundām.</p>
         <ul class="format-card__list">
           <li>Unikālas lomas un tēlu raksturi</li>
-          <li>Vadītājs kā šovrauners</li>
+          <li>Vadītājs kā šova veidotājs (showrunner)</li>
           <li>Maksimāla viesu iesaiste</li>
           <li>Spēle spēlē ar konkursiem par imunitāti un "izdzīvošanu"</li>
         </ul>
-        <a href="#format-author" class="format-card__link" data-acc="format-author">Sīkāk →</a>
+        <div class="format-card__actions">
+          
+        <a href="#format-author" class="format-card__link" data-acc="format-author">Uzzināt vairāk →</a>
+        <a href="#booking" class="format-card__cta">
+  Rezervēt datumu →
+</a>
+        </div>
       </article>
 
       <article class="format-card format-card--featured">
@@ -202,15 +154,20 @@
           {{prices.bunker_immersive}}
         </div>
         <h3 class="format-card__title">Bunker: Immersive Experience</h3>
-        <p class="format-card__hook">Iegrimšana sižetā vēl pirms spēles sākuma. Jaunums tirgū!</p>
+        <p class="format-card__hook">Iegrimšana spēles sižetā vēl pirms tās sākuma. Tirgus jaunums!</p>
         <ul class="format-card__list">
           <li>Slepena lokācija</li>
           <li>Personīgās lomas un dalībnieka dosjē</li>
           <li>Sagatavoti rekvizīti (bagāža)</li>
           <li>Stāsts, kurā katrai izvēlei ir nozīme</li>
-          <li>Kino atmosfēra, nevis vienkārši spēle</li>
+          <li>Kino atmosfēra, nevis vienkārša spēle</li>
         </ul>
-        <a href="#format-immersive-bunker" class="format-card__link" data-acc="format-immersive-bunker">Sīkāk →</a>
+        <div class="format-card__actions">
+          <a href="#format-immersive-bunker" class="format-card__link" data-acc="format-immersive-bunker">Uzzināt vairāk →</a>
+        <a href="#booking" class="format-card__cta">
+  Rezervēt datumu →
+</a>
+        </div>
       </article>
 
       <article class="format-card">
@@ -225,7 +182,13 @@
           <li>Profesionāla atribūtika</li>
           <li>Dāvanas labākajiem spēlētājiem</li>
         </ul>
-        <a href="#format-classic" class="format-card__link" data-acc="format-classic">Sīkāk →</a>
+        <div class="format-card__actions">
+          <a href="#format-classic" class="format-card__link" data-acc="format-classic">Uzzināt vairāk →</a>
+          <a href="#booking" class="format-card__cta">
+  Rezervēt datumu →
+</a>
+        </div>
+        
       </article>
 
       <article class="format-card">
@@ -237,121 +200,175 @@
           <li>Stratēģija un argumenti</li>
           <li>Komandas dinamika</li>
         </ul>
-        <a href="#format-bunker" class="format-card__link" data-acc="format-bunker">Sīkāk →</a>
+        <div class="format-card__actions">
+          <a href="#format-bunker" class="format-card__link" data-acc="format-bunker">Uzzināt vairāk →</a>
+          <a href="#booking" class="format-card__cta">
+  Rezervēt datumu →
+</a>
+        </div>
       </article>
 
       <article class="extras-card" id="extras">
         <div class="extras-card__head">
           <p class="extras-card__kicker">Papildus</p>
-          <h3 class="extras-card__title">Dynasty Events pakalpojumi</h3>
-          <p class="extras-card__text">Ja jums nepieciešams ne tikai spēles formāts, bet pilns pasākums "zem atslēgas" — mēs palīdzēsim.</p>
+          <h3 class="extras-card__title">Pakalpojumi no Dynasty Events</h3>
+          <p class="extras-card__text">Ja nepieciešams ne tikai spēles formāts, bet pilna pasākuma organizēšana "no A līdz Z" — mēs palīdzēsim.</p>
         </div>
         <ul class="extras-card__list">
-          <li class="extras-card-item">Mazu kāzu, korporatīvo pasākumu, jubileju organizēšana</li>
-          <li class="extras-card-item">Vecmeitu un vecpuišu ballītes "zem atslēgas"</li>
+          <li class="extras-card-item">Kamerstila kāzu, korporatīvo pasākumu un jubileju organizēšana</li>
+          <li class="extras-card-item">Vecmeitu un vecpuišu ballītes</li>
           <li class="extras-card-item">Fotogrāfs un videogrāfs</li>
-          <li class="extras-card-item">Mobilā filmēšana + montāža <span>(formātu apspriežam ar klientu)</span></li>
-          <li class="extras-card-item">Pasākumu dekors un noformēšana</li>
+          <li class="extras-card-item">Mobilā filmēšana + montāža <span>(formātu saskaņojam ar klientu)</span></li>
+          <li class="extras-card-item">Dekors un pasākumu noformēšana</li>
         </ul>
       </article>
     </div>
   </div>
 </section>
 
-      <section class="format-details" id="formats-details">
-        <div class="container">
-          <div class="accordion accordion--details" id="formats-accordion">
-            <details class="acc-details acc-trigger" id="format-author">
-              <summary class="acc-details__summary">
-                Party Mafia — mūsu hita formāts
-                <span class="acc-details__icon" aria-hidden="true">+</span>
-              </summary>
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="gallery__media">
+      <div class="gallery__slider swiper" aria-label="Let’s Party galerija">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+          </div>
 
-              <div class="acc-details__panel">
-                <div class="acc-details__content">
-                  <p>
-                    Party Mafia ir unikāls formāts, jauns skatījums uz ierasto 
-                    "mafiju". Tā nav tikai spēle, bet pilnvērtīga programma 
-                    jūsu svētkiem. Dalībniekiem tiek dota iespēja izpaust savas 
-                    aktierprasmes, parādīt sevi no jaunas puses un izcīnīt 
-                    uzvaru, pateicoties savām zināšanām, veiklībai, reakcijai 
-                    un atjautībai. Tas ir formāts ar daudz emocijām un dinamiku, 
-                    kur viesi atbrīvojas un iesaistās procesā. Piemērots 
-                    kompānijām, kuras vēlas "draivu", kustību un spilgtas 
-                    atmiņas.
-                  </p>
-                </div>
-              </div>
-            </details>
+        <button class="gallery__nav gallery__nav--prev" type="button" aria-label="Iepriekšējais foto"></button>
+        <button class="gallery__nav gallery__nav--next" type="button" aria-label="Nākamais foto"></button>
+        
+        <!-- <div class="gallery__pagination swiper-pagination"></div> -->
+      </div>
+    </div>
+  </div>
+</section>
 
-            <details
-              class="acc-details acc-trigger"
-              id="format-immersive-bunker"
-            >
-              <summary class="acc-details__summary">
-                Bunker: Immersive Experience
-                <span class="acc-details__icon" aria-hidden="true">+</span>
-              </summary>
-
-              <div class="acc-details__panel">
-                <div class="acc-details__content">
-                  <p>
-                    Šis formāts ir domāts tiem, kuri vēlas maksimālu iedziļināšanos 
-                    apokalipses un izdzīvošanas atmosfērā. Mēs ņemam par pamatu 
-                    klasisko "bunkuru" un radām unikālu spēles pieredzi tieši 
-                    jūsu kompānijai: ar pārdomātu koncepciju, atmosfēru un 
-                    detaļām, kas atklājas pakāpeniski. Viesi iepriekš zina savu 
-                    profesiju un priekšstāstu, un tālāk spēle izvēršas veselā 
-                    stāstā jau pašā lokācijā. Šis ir formāts tiem, kuri vēlas 
-                    nevis vienkārši spēlēt, bet izdzīvot spēli!
-                  </p>
-                </div>
-              </div>
-            </details>
-
-            <details class="acc-details acc-trigger" id="format-classic">
-              <summary class="acc-details__summary">
-                Klasiskā "Mafija"
-                <span class="acc-details__icon" aria-hidden="true">+</span>
-              </summary>
-
-              <div class="acc-details__panel">
-                <div class="acc-details__content">
-                  <p>
-                    Stratēģiska, psiholoģiska un intelektuāla spēle mierīgām 
-                    kompānijām. Ideāls formāts, lai neuzbāzīgi papildinātu 
-                    vakaru uz 1–2 stundām: aprunātos, pavērotu, pieslēgtu 
-                    loģiku un sajustu azartu bez lieka trokšņa. Piemērots 
-                    tiem, kuri mīl klasiku, atmosfēru un mērenu tempu.
-                  </p>
-                </div>
-              </div>
-            </details>
-
-            <details class="acc-details acc-trigger" id="format-bunker">
-              <summary class="acc-details__summary">
-                Bunkurs — klasiskais formāts
-                <span class="acc-details__icon" aria-hidden="true">+</span>
-              </summary>
-
-              <div class="acc-details__panel">
-                <div class="acc-details__content">
-                  <p>
-                    Izdzīvošanas spēle, kurā izglābsies nevis skaļākais, bet 
-                    pārliecinošākais. Katrs spēlētājs saņem unikālu tēla 
-                    raksturojumu, un viņa galvenais uzdevums ir pierādīt, 
-                    kāpēc tieši viņš ir pelnījis nokļūt bunkurā un kā varēs 
-                    palīdzēt cilvēcei tikt galā ar tuvojošos katastrofu. Šeit 
-                    nav jāmelo — ir svarīgi argumentēt, domāt stratēģiski un 
-                    just cilvēkus. Spēle aizrauj, vieno un bieži atklāj 
-                    dalībniekus no pavisam jaunas puses.
-                  </p>
-                </div>
-              </div>
-            </details>
+<section class="format-details" id="formats-details">
+  <div class="container">
+    <div class="accordion accordion--details" id="formats-accordion">
+      
+      <details class="acc-details acc-trigger" id="format-author">
+        <summary class="acc-details__summary">
+          {{formats.party_mafia.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.party_mafia.description}}</p>
+            <a href="#booking" class="acc-details__cta">
+  Rezervēt datumu →
+</a>
           </div>
         </div>
-      </section>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-immersive-bunker">
+        <summary class="acc-details__summary">
+          {{formats.bunker_immersive.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.bunker_immersive.description}}</p>
+            <a href="#booking" class="acc-details__cta">
+  Rezervēt datumu →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-classic">
+        <summary class="acc-details__summary">
+          {{formats.classic_mafia.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.classic_mafia.description}}</p>
+            <a href="#booking" class="acc-details__cta">
+  Rezervēt datumu →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-bunker">
+        <summary class="acc-details__summary">
+          {{formats.bunker.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.bunker.description}}</p>
+            <a href="#booking" class="acc-details__cta">
+  Rezervēt datumu →
+</a>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="guide" id="guide">
+  <div class="container">
+    <p class="guide__label">Kā notiek sadarbība?</p>
+    <h2 class="guide__title">Vienkāršs un saprotams process — no pieteikuma līdz spilgtiem svētkiem</h2>
+
+    <ul class="guide__list">
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Solis 01</h3>
+          <p class="guide__text">
+            Jūs atstājat pieteikumu sev ērtā veidā.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Solis 02</h3>
+          <p class="guide__text">
+            Mēs uzdodam 3–5 precizējošus jautājumus, lai saprastu pasākuma mērogu un mērķus.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Solis 03</h3>
+          <p class="guide__text">
+            Piemeklējam optimālo spēles formātu un aktivitātes tieši jūsu kompānijai.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Solis 04</h3>
+          <p class="guide__text">
+            Sagatavojam individuālu scenāriju un saskaņojam visas tehniskās detaļas.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Solis 05</h3>
+          <p class="guide__text">
+            Vadām spēli, iesaistām viesus un radām to īpašo svētku atmosfēru.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
 
       <section class="why" id="why">
   <div class="container">
@@ -365,46 +382,35 @@
       <article class="why-item">
         <h3 class="why-item__title">Producentu pieeja</h3>
         <p class="why-item__text">
-          Mēs nestrādājam pēc šabloniem. Katrs formāts tiek pielāgots 
-          kompānijai, noskaņojumam un pasākuma mērķim! Mēs uzdodam 
-          ievirzošus jautājumus un priecājamies, kad stāstāt par savu 
-          uzņēmumu, lai mēs varētu izdomāt unikālus "knifus" tieši jums.
+          Mēs nestrādājam pēc šabloniem. Katrs formāts tiek pielāgots kompānijai, noskaņojumam un pasākuma mērķim! Mēs uzdodam jautājumus un priecājamies, kad stāstāt par savu kolektīvu, lai varētu izdomāt unikālas "odziņas" tieši jums. 
         </p>
       </article>
 
       <article class="why-item">
-        <h3 class="why-item__title">Dzīvīga un maiga iesaiste</h3>
+        <h3 class="why-item__title">Dzīvīga un maiga iesaistīšana</h3>
         <p class="why-item__text">
-          Mēs protam radīt dinamiku bez spiediena! Mēs noteikti nevienu 
-          nepiespiedīsim. Aktīvie viesi saņem telpu spēlei, bet mierīgākie 
-          — jūtas pārliecināti un dabiski iesaistās procesā.
+          Mēs protam radīt dinamiku bez spiediena! Mēs noteikti nevienu nespiedīsim piedalīties. Aktīvie viesi saņem telpu izpausmei, savukārt mierīgākie jūtas pārliecināti un dabiski iekļaujas procesā.
         </p>
       </article>
 
       <article class="why-item">
         <h3 class="why-item__title">Zāles un atmosfēras izjūta</h3>
         <p class="why-item__text">
-          Mēs uzmanīgi nolasām grupas noskaņojumu un pārvaldām vakara tempu, 
-          lai tas "nenosēstos" un nenogurdinātu. Spēle attīstās organiski, 
-          un atmosfēra paliek dzīva un silta.
+          Mēs uzmanīgi nolasām grupas noskaņojumu un pārvaldām vakara tempu, lai tas "neizplūstu" un nepiekūstu. Spēle attīstās organiski, un atmosfēra paliek dzīva un silta.
         </p>
       </article>
 
       <article class="why-item">
         <h3 class="why-item__title">Daudzvalodu formāts</h3>
         <p class="why-item__text">
-          Mēs vadām pasākumus latviešu, krievu un angļu valodās, ieskaitot 
-          bilingvālus formātus — lai ikviens viesis justos vienlīdzīgs 
-          un neizkristu no procesa.
+          Mēs vadām pasākumus latviešu, krievu un angļu valodās, ieskaitot bilingvālos formātus — lai ikviens viesis justos vienlīdzīgs un neizkristu no procesa.
         </p>
       </article>
 
       <article class="why-item">
         <h3 class="why-item__title">Elastība un komforts</h3>
         <p class="why-item__text">
-          Mēs pielāgojam formātu cilvēkiem, nevis cilvēkus formātam. 
-          Ņemam vērā laiku, lokāciju un viesu sastāvu, lai vakars būtu 
-          ērts un loģisks visiem dalībniekiem.
+          Mēs pielāgojam formātu cilvēkiem, nevis cilvēkus formātam. Ņemam vērā laika plānu, lokāciju un viesu sastāvu, lai vakars būtu ērts un loģisks visiem dalībniekiem.
         </p>
       </article>
     </div>
@@ -417,7 +423,7 @@
           <p class="reviews__label">Ko par mums saka?</p>
           <h2 class="reviews__title">Klientu atsauksmes</h2>
 
-          <div class="reviews__track" aria-label="Отзывы">
+          <div class="reviews__track" aria-label="Atsauksmes">
   {{reviews_items}}
 </div>
         </div>
@@ -445,10 +451,50 @@
         </dialog>
       </section>
 
-      <section class="faq" id="faq">
+            <section class="about" id="about">
+        <div class="container">
+          <div class="about__grid">
+            <div class="about__text">
+              <p class="about__kicker">Kas mēs esam</p>
+
+              <h2 class="about__title">Mēs neradām spēles — mēs radām pieredzi</h2>
+
+              <div class="about__body">
+                <p>
+                  <strong>Let’s Party</strong> — tas ir projekts, kas dzimis no draudzības, enerģijas un mīlestības pret dzīvīgiem svētkiem.
+                </p>
+
+                <p>
+                  Mēs esam Anastasija un Diāna, divas draudzenes, kuras kopš bērnības ir bijušas visu pasākumu centrā: aktieru pulciņš, skolas svētki, scenāriji un ballītes draugiem — vienkārši tāpēc, ka mums tas patiešām interesēja.
+                </p>
+
+                <p>
+                  Vēl astotajā klasē pēc izrādes iestudēšanas mēs izdomājām nosaukumu <strong>Dynasty</strong>, apvienojot mūsu vārdus un sapni par savu lietu. 2025. gadā šis sapnis kļuva par pasākumu aģentūru — <strong>Dynasty Events</strong>. Taču sākt mēs nolēmām ar projektu Let’s Party.
+                </p>
+
+                <p>
+                  <strong>Anastasija</strong> — projekta līdzdibinātāja un vadītāja kopš 2022. gada, aiz viņas pleciem ir vairāk nekā 500 pasākumu. Viņai ir svarīgi nevis vienkārši "atstrādāt formātu", bet radīt atmosfēru, kas piemērota tieši jūsu kompānijai.
+                </p>
+
+                <p>
+                  <strong>Diāna</strong> — projekta līdzdibinātāja ar uzņēmējdarbības pieredzi kopš 2020. gada. Viņa viegli atrod pieeju ikvienam, prot aizraut, vienoties un radīt komfortablu, dzīvu atmosfēru.
+                </p>
+
+                <p class="about__note">
+                  Mēs esam vienādas pēc "vibe", enerģijas un attieksmes pret darbu — un tieši tas padara mūsu komandu par vienotu veselumu.
+                </p>
+              </div>
+            </div>
+
+            <div class="about__media">
+ <img src="/src/assets/about.jpg" alt="">
+</div>
+      </section>
+
+            <section class="faq" id="faq">
         <div class="container">
           <p class="faq__label">Biežāk uzdotie jautājumi</p>
-          <h2 class="faq__title">FAQ</h2>
+          <h2 class="faq__title">BUJ</h2>
 
 <div class="accordion accordion--faq" id="faq-accordion">
       {{faq_items}}
@@ -461,7 +507,7 @@
           <div class="contact__card">
             <p class="contact__kicker">Sazināties</p>
 
-            <h2 class="contact__title">Rezervēt pasākumu</h2>
+            <h2 class="contact__title">Apspriedīsim pasākuma formātu</h2>
 
             <p class="contact__text">
               Raksti tur, kur tev ir ērtāk. Atbildēsim ātri un precizēsim detaļas.
@@ -491,7 +537,7 @@
               </a>
             </div>
 
-            <p class="contact__note">* Izbraukums un ceļš tiek rēķināts atsevišķi.</p>
+            <p class="contact__note">* Izbraukums un ceļa izdevumi tiek rēķināti atsevišķi.</p>
           </div>
         </div>
       </section>
